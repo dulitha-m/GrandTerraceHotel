@@ -1,0 +1,242 @@
+/* Clean base */
+.dining-page {
+    background-color: var(--color-bg-main);
+}
+
+.dining-header {
+    height: 60vh;
+    background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    margin-bottom: var(--spacing-xl);
+}
+
+.dining-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.dining-header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+}
+
+.dining-header-content h1 {
+    font-size: 5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.dining-header-content p {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    color: var(--color-text-main);
+    opacity: 0.9;
+}
+
+/* Filter Bar */
+.dining-filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding-bottom: var(--spacing-sm);
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    color: var(--color-gold-base);
+}
+
+.filter-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    /* Align with border-bottom */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-gold-base);
+}
+
+/* List Layout */
+.dining-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxl);
+    /* Huge gap between items */
+    padding-bottom: var(--spacing-xl);
+}
+
+.dining-item {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    /* Image wider than text */
+    gap: var(--spacing-lg);
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+    /* Alternating layout logic using nth-child */
+}
+
+/* Alternate layout: Text Left, Image Right for even items */
+.dining-item:nth-child(even) {
+    grid-template-columns: 1fr 1.2fr;
+    direction: rtl;
+    /* FLip content */
+}
+
+.dining-item:nth-child(even) .dining-item-content {
+    direction: ltr;
+    /* Reset text direction inside */
+    text-align: right;
+    /* Align text right for variety? Or keep left */
+    /* Let's keep text alignment left for readability, but order swapped */
+}
+
+/* Better way than direction:rtl is grid-template-areas or just ordering */
+.dining-item:nth-child(even) .dining-item-image {
+    order: 2;
+}
+
+.dining-item:nth-child(even) .dining-item-content {
+    order: 1;
+    padding-right: var(--spacing-lg);
+    padding-left: 0;
+}
+
+.dining-item-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.dining-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.dining-item:hover .dining-item-image img {
+    transform: scale(1.05);
+}
+
+.dining-item-content {
+    padding: var(--spacing-md);
+    background: transparent;
+    /* Clean */
+}
+
+.dining-cuisine {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-gold-base);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.dining-item-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-main);
+}
+
+.dining-description {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.dining-details {
+    margin-bottom: var(--spacing-lg);
+    border-top: 1px solid var(--color-border-subtle);
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding: var(--spacing-sm) 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.detail-row .label {
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.detail-row .value {
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+.dining-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .dining-item {
+        grid-template-columns: 1fr !important;
+        /* Stack vertically always */
+        gap: var(--spacing-md);
+    }
+
+    .dining-item:nth-child(even) .dining-item-image {
+        order: 0;
+    }
+
+    .dining-item:nth-child(even) .dining-item-content {
+        order: 1;
+        padding-right: var(--spacing-md);
+    }
+
+    .dining-item-image {
+        height: 300px;
+    }
+
+    .dining-header-content h1 {
+        font-size: 3rem;
+    }
+}

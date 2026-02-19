@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  /* Ultra-Premium Roasted Cocoa Palette */
+
+  /* Main Background - A deep, rich, near-black cocoa */
+  --color-bg-main: #140d0b;
+
+  /* Surface - Slightly lighter roasted bean color */
+  --color-bg-surface: #1f1411;
+
+  /* Accents - Retaining Gold as it pairs perfectly with Cocoa */
+  --color-gold-light: #E5C579;
+  --color-gold-base: #C5A028;
+  --color-gold-dark: #8A6E1C;
+  --color-primary: #C5A028;
+  /* Highlight color */
+
+  /* Text - Warm tones to match the cocoa warmth */
+  --color-text-main: #F3EFEA;
+  /* Creamy White */
+  --color-text-muted: #A69B95;
+  /* Warm Grey */
+
+  --color-border-subtle: rgba(197, 160, 40, 0.15);
+  /* Subtle Gold border */
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Manrope', sans-serif;
+
+  /* Ratios & Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1.5rem;
+  /* 24px */
+  --spacing-md: 3rem;
+  /* 48px */
+  --spacing-lg: 6rem;
+  /* 96px */
+  --spacing-xl: 10rem;
+  /* 160px */
+  --spacing-xxl: 12rem;
+
+  /* Animation Tokens */
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-entering: 1.2s;
+  --duration-hover: 0.6s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3e2b22;
+  border-radius: 4px;
+}
+
+/* Cocoa Thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-base);
+}
+
+/* Typography Base */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-main);
+}
+
+h1 {
+  font-size: clamp(3.5rem, 5vw, 6rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-weight: 300;
+  color: var(--color-text-muted);
+  max-width: 65ch;
+}
+
+.section-subtitle {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-gold-base);
+  margin-bottom: var(--spacing-sm);
+  opacity: 0.9;
+}
+
+/* Button System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 36px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: transparent;
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-main);
+  transition: all var(--duration-hover) var(--ease-premium);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--color-text-main);
+  transition: all var(--duration-hover) var(--ease-premium);
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+}
+
+.btn:hover {
+  color: var(--color-bg-main);
+  border-color: var(--color-text-main);
+}
+
+.btn-primary {
+  border-color: var(--color-gold-base);
+  color: var(--color-gold-base);
+}
+
+.btn-primary::after {
+  background-color: var(--color-gold-base);
+}
+
+.btn-primary:hover {
+  color: #140d0b;
+}
+
+/* Dark cocoa text on gold hover */
+
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+  border-color: #fff;
+}
+
+/* Utilities */
+.container {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gold {
+  color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s var(--ease-premium);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
