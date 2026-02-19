@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 import { Link } from 'react-router-dom';
 import './Dining.css';
 
@@ -11,7 +11,7 @@ const Dining = () => {
 
     useEffect(() => {
         // Fetch restaurants
-        axios.get('http://localhost:5000/restaurants')
+        api.get('/restaurants')
             .then(response => {
                 if (response.data && response.data.length > 0) {
                     setRestaurants(response.data);

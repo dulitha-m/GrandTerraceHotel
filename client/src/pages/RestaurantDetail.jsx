@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import './RestaurantDetail.css';
 
 const RestaurantDetail = () => {
@@ -11,7 +11,7 @@ const RestaurantDetail = () => {
     useEffect(() => {
         window.scrollTo(0, 0); // Start at top
 
-        axios.get(`http://localhost:5000/restaurants/${id}`)
+        api.get(`/restaurants/${id}`)
             .then(response => {
                 setRestaurant(response.data);
                 setLoading(false);

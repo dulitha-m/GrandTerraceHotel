@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 import Hero from '../components/Hero';
 import DiningCarousel from '../components/DiningCarousel';
 import { Link } from 'react-router-dom';
@@ -37,7 +37,7 @@ const Home = () => {
             setRestaurants(fallback);
 
             try {
-                const response = await axios.get('http://localhost:5000/restaurants');
+                const response = await api.get('/restaurants');
                 if (response.data && response.data.length > 0) {
                     setRestaurants(response.data);
                 }
