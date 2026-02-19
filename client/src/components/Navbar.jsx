@@ -70,16 +70,9 @@ const Navbar = () => {
                         <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>Story</NavLink></li>
                         <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink></li>
                     </ul>
-                    {/* Mobile CTA (only visible in mobile drawer if needed) */}
-                    <div className="mobile-cta-wrapper">
-                        <Link to="/contact" className="btn btn-primary">Book Now</Link>
-                    </div>
                 </div>
 
-                {/* Desktop Call To Action */}
-                <div className="nav-right desktop-only">
-                    <Link to="/contact" className="nav-book-link">Book Now</Link>
-                </div>
+
             </div>
         </nav>
     );
