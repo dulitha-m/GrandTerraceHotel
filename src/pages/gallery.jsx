@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, X, ChevronLeft, ChevronRight, Sparkles, Camera } from 'lucide-react';
+import { ArrowUpRight, X, Sparkles, Camera } from 'lucide-react';
 
-// --- ASSETS IMPORT (ඔයාගේ assets folder එකේ නම අනුව) ---
+// --- ASSETS IMPORT ---
 import barImg from '../assets/bar.png';
 import karaokeImg from '../assets/karaoke.png';
 import nightsImg from '../assets/nights.jpg';
@@ -13,14 +13,14 @@ import nightImg from '../assets/nig.png';
 import kerImg from '../assets/ker.png';
 
 const galleryImages = [
-  { url: barImg, title: "The Grand Bar", category: "Dining", span: "tall" },
-  { url: karaokeImg, title: "Karaoke Lounge", category: "Entertainment", span: "normal" },
-  { url: nightsImg, title: "Heritage Nights", category: "Ambiance", span: "wide" },
-  { url: tapImg, title: "Premium Tap Room", category: "Bar", span: "normal" },
-  { url: tapbarImg, title: "Tap Bar Interior", category: "Dining", span: "tall" },
-  { url: niImg, title: "Signature Cocktails", category: "Mixology", span: "normal" },
-  { url: nightImg, title: "Evening Glow", category: "Vibe", span: "wide" },
-  { url: kerImg, title: "Grand Terrace Spreads", category: "Cuisine", span: "normal" },
+  { url: barImg, title: "The Grand Bar", category: "Dining" },
+  { url: karaokeImg, title: "Karaoke Lounge", category: "Entertainment" },
+  { url: nightsImg, title: "Heritage Nights", category: "Ambiance" },
+  { url: tapImg, title: "Premium Tap Room", category: "Bar" },
+  { url: tapbarImg, title: "Tap Bar Interior", category: "Dining" },
+  { url: niImg, title: "Signature Cocktails", category: "Mixology" },
+  { url: nightImg, title: "Evening Glow", category: "Vibe" },
+  { url: kerImg, title: "Grand Terrace Spreads", category: "Cuisine" },
 ];
 
 const categories = ["All", "Shisha", "Bar", "Entertainment"];
@@ -33,17 +33,6 @@ export default function GalleryPage() {
     ? galleryImages 
     : galleryImages.filter(img => img.category === filter || img.category.includes(filter));
 
-  // --- Animation Variants ---
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
-  };
-
-  const staggerContainer = {
-    animate: { transition: { staggerChildren: 0.1 } }
-  };
-
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-40 pb-24 selection:bg-[#D4A574] selection:text-black overflow-hidden">
       
@@ -53,7 +42,7 @@ export default function GalleryPage() {
 
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12">
         
-        {/* --- HEADER SECTION (About Style) --- */}
+        {/* --- HEADER SECTION --- */}
         <header className="text-center mb-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -76,7 +65,9 @@ export default function GalleryPage() {
           </div>
 
           <motion.p 
-            {...fadeInUp}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-stone-400 font-light italic text-lg max-w-2xl mx-auto mt-6"
           >
             "Every frame tells a story of heritage, taste, and the vibrant spirit of Grand Terrace."
@@ -84,10 +75,7 @@ export default function GalleryPage() {
         </header>
 
         {/* --- FILTER BUTTONS --- */}
-        <motion.div 
-          {...fadeInUp}
-          className="flex flex-wrap justify-center gap-3 mb-16"
-        >
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -101,18 +89,12 @@ export default function GalleryPage() {
               {cat}
             </button>
           ))}
-        </motion.div>
+        </div>
 
-        {/* --- GALLERY MASONRY GRID --- */}
-        <motion.div 
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8"
-        >
+        {/* --- GALLERY GRID --- */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
           <AnimatePresence mode='popLayout'>
-            {filteredImages.map((img, idx) => (
+            {filteredImages.map((img) => (
               <motion.div
                 layout
                 key={img.title}
@@ -123,18 +105,16 @@ export default function GalleryPage() {
                 onClick={() => setSelectedImg(img)}
                 className="relative group cursor-pointer overflow-hidden rounded-xl border border-white/5 bg-stone-900/40 break-inside-avoid"
               >
-                {/* Image Wrapper */}
                 <div className="overflow-hidden">
                   <motion.img 
                     src={img.url} 
                     alt={img.title}
                     whileHover={{ scale: 1.08 }}
                     transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="w-full h-auto object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-auto object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
 
-                {/* Overlay Details */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
                   <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <div className="flex items-center gap-2 mb-2">
@@ -150,20 +130,21 @@ export default function GalleryPage() {
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
 
-      {/* --- LIGHTBOX (Zoom View) --- */}
+      {/* --- LIGHTBOX (Fix කරපු කොටස) --- */}
       <AnimatePresence>
         {selectedImg && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6"
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-12"
             onClick={() => setSelectedImg(null)}
           >
-            <button className="absolute top-10 right-10 text-white/50 hover:text-white transition-colors">
+            {/* Close Button */}
+            <button className="absolute top-6 right-6 text-white/50 hover:text-[#D4A574] transition-colors z-[110]">
               <X size={32} strokeWidth={1} />
             </button>
             
@@ -171,15 +152,22 @@ export default function GalleryPage() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="max-w-5xl w-full"
+              className="relative max-w-5xl w-full flex flex-col items-center"
               onClick={e => e.stopPropagation()}
             >
-              <img src={selectedImg.url} className="w-full h-auto rounded-lg shadow-2xl" alt="Preview" />
-              <div className="mt-6 flex justify-between items-end">
-                <div>
-                  <p className="text-[#D4A574] uppercase tracking-[.4em] text-[10px] mb-2">{selectedImg.category}</p>
-                  <h2 className="text-4xl font-serif text-white">{selectedImg.title}</h2>
-                </div>
+              {/* Image Container with Constraints */}
+              <div className="relative w-full flex justify-center">
+                <img 
+                  src={selectedImg.url} 
+                  className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl border border-white/10" 
+                  alt="Preview" 
+                />
+              </div>
+
+              {/* Caption Section */}
+              <div className="mt-8 text-center">
+                <p className="text-[#D4A574] uppercase tracking-[.4em] text-[10px] mb-2">{selectedImg.category}</p>
+                <h2 className="text-3xl md:text-5xl font-serif text-white italic">{selectedImg.title}</h2>
               </div>
             </motion.div>
           </motion.div>
