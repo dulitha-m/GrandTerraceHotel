@@ -12,6 +12,7 @@ import Bar from './pages/Bar';
 import Shisha from "./pages/Shisha.jsx";
 import TapBar from "./pages/TapBar.jsx";
 import Karaoke from "./pages/Karaoke.jsx";
+import GalleryPage from "./pages/gallery.jsx";
 export default function App() {
   return (
     <ScrollToTop>
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/shisha" element={<Shisha />} />
           <Route path="/tap-bar" element={<TapBar />} />
           <Route path="/karaoke" element={<Karaoke />} />
+          <Route path="/gallery" element={<GalleryPage />} />
         </Route>
       </Routes>
     </ScrollToTop>
