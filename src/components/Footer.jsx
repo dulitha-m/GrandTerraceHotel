@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // මේක අනිවාර්යයෙන්ම ඕනේ
 import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, Send, ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
@@ -36,6 +37,8 @@ const Footer = () => {
                 <a 
                   key={index} 
                   href={social.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="w-11 h-11 flex items-center justify-center border border-[#D4A574]/20 rounded-full text-[#D4A574] hover:bg-[#D4A574] hover:text-black transition-all duration-500 hover:-translate-y-1"
                 >
                   <social.Icon size={18} />
@@ -49,19 +52,19 @@ const Footer = () => {
             <div>
               <h4 className="text-[#D4A574] uppercase tracking-[0.4em] text-[10px] font-black mb-10">Discover</h4>
               <ul className="space-y-5 text-[12px] uppercase tracking-widest font-medium">
-                <li><a href="/" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Home <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></a></li>
-                <li><a href="/dining" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Lounges & Bar <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></a></li>
-                <li><a href="/About" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">About <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></a></li>
-                <li><a href="/Contact" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Contact <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></a></li>
+                <li><Link to="/" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Home <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></Link></li>
+                <li><Link to="/dining" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Lounges & Bar <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></Link></li>
+                <li><Link to="/about" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">About <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></Link></li>
+                <li><Link to="/contact" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Contact <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-[#D4A574] uppercase tracking-[0.4em] text-[10px] font-black mb-10">Legal</h4>
               <ul className="space-y-5 text-[12px] uppercase tracking-widest font-medium">
-                <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Reservations</a></li>
-                <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Terms & Cond</a></li>
-                <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Cookies</a></li>
+                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Reservations</Link></li>
+                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Terms & Cond</Link></li>
+                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Cookies</Link></li>
               </ul>
             </div>
           </div>
