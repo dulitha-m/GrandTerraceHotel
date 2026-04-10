@@ -7,7 +7,7 @@ import MainLogo from "../assets/glogo.png";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
-  { to: "/dining", label: "Lounges & Bars" },
+  { to: "/dining", label: "Menus" },
   { to: "/About", label: "About" },
   { to: "/Contact", label: "Contact" },
   { to: "/gallery", label: "Gallery" },
