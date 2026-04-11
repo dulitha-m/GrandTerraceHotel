@@ -64,7 +64,7 @@ const Home = () => {
       <section className="text-center mb-12 px-6 relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
           <h2 className="text-[#E6D5C3] text-4xl md:text-8xl font-serif uppercase tracking-[0.1em]">
-            Dine <span className="italic font-light lowercase text-[#D4A574]">with</span> Us
+            Happy <span className="italic font-light lowercase text-[#D4A574]">with</span> Us
           </h2>
         </motion.div>
       </section>
