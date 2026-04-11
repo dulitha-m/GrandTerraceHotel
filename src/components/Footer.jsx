@@ -153,12 +153,14 @@ const Footer = () => {
             </button>
 
             {/* Developer Credit */}
-            <div className="flex items-center gap-3 pl-8 border-l border-white/10">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-stone-600">Digital Atelier</span>
-              <span className="text-[11px] uppercase tracking-[0.2em] text-[#D4A574] font-black hover:tracking-[0.3em] transition-all duration-500 cursor-pointer">
-                B & D Solutions
-              </span>
-            </div>
+<div className="flex items-center gap-3 pl-8 border-l border-white/10">
+  <span className="text-[10px] uppercase tracking-[0.2em] text-stone-600 font-medium">
+    Digital Atelier
+  </span>
+  <span className="text-[11px] tracking-[0.2em] text-[#D4A574] font-black hover:tracking-[0.3em] transition-all duration-500 cursor-pointer">
+    DuBa Tech Soluations
+  </span>
+</div>
           </div>
 
         </div>
