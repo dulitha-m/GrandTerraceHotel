@@ -11,10 +11,10 @@ const Footer = () => {
   };
 
   const navLinks = [
-    { name: "The Residence", path: "/" },
-    { name: "Culinary Arts", path: "/dining" },
-    { name: "Our Heritage", path: "/about" },
-    { name: "Private Events", path: "/contact" },
+    { name: "Home", path: "/" },
+    { name: "Menus", path: "/dining" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
     { name: "Gallery", path: "/gallery" }
   ];
 
@@ -153,13 +153,13 @@ const Footer = () => {
             </button>
 
             {/* Developer Credit */}
-<div className="flex items-center gap-3 pl-8 border-l border-white/10">
-  <span className="text-[10px] uppercase tracking-[0.2em] text-stone-600 font-medium">
-    Digital Atelier
-  </span>
-  <span className="text-[11px] tracking-[0.2em] text-[#D4A574] font-black hover:tracking-[0.3em] transition-all duration-500 cursor-pointer">
-    DuBa Tech Soluations
-  </span>
+            <div className="flex items-center gap-3 pl-8 border-l border-white/10">
+             <span className="text-[10px] uppercase tracking-[0.2em] text-stone-600 font-medium">
+               Digital Atelier
+            </span>
+           <span className="text-[11px] tracking-[0.2em] text-[#D4A574] font-black hover:tracking-[0.3em] transition-all duration-500 cursor-pointer">
+            DuBa Tech Soluations
+          </span>
 </div>
           </div>
 
