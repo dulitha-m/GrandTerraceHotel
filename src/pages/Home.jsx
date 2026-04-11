@@ -6,6 +6,7 @@ import kerImg from "../assets/ker.png";
 import tapImg from "../assets/tap.png";
 import nigImg from "../assets/nig.png";
 
+
 const outlets = [
   { id: "01", title: "Governor's Bar", subtitle: "FINE SPIRITS", img: baImg, path: "/bar" },
   { id: "02", title: "ISTANBUL NIGHTS", subtitle: "Shisha Lounge", img: nigImg, path: "/shisha" },

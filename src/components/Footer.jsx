@@ -66,24 +66,6 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-
-          {/* Newsletter - Premium Card Style */}
-          <div className="lg:col-span-4 bg-stone-900/40 p-10 rounded-2xl border border-white/5 backdrop-blur-sm">
-            <h4 className="text-white uppercase tracking-[0.3em] text-xs font-black mb-4">The Inner Circle</h4>
-            <p className="text-[12px] text-stone-400 font-light leading-relaxed mb-8">
-              Subscribe to receive exclusive invitations for heritage tasting events and seasonal offers.
-            </p>
-            <div className="relative group">
-              <input 
-                type="email" 
-                placeholder="EMAIL ADDRESS" 
-                className="w-full bg-stone-950 border border-white/10 px-6 py-5 text-[10px] tracking-widest text-white focus:outline-none focus:border-[#D4A574]/50 transition-all rounded-xl"
-              />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-[#D4A574] text-black rounded-lg hover:bg-white transition-all duration-300">
-                <Send size={18} />
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* --- MIDDLE SECTION: LUXURY INFO STRIPS --- */}

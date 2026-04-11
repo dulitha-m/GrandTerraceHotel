@@ -21,16 +21,7 @@ const Karaoke = () => {
           <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">Sing in Luxury</h2>
           <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"Private suites for your inner rockstar. High-end sound systems, personalized service, and memories that last a lifetime."</p>
         </div>
-        <div className="bg-stone-900/30 p-10 rounded-[40px] border border-white/5 backdrop-blur-xl">
-           <Music className="text-[#D4A574] mb-8" size={32}/>
-           <h3 className="text-xs uppercase tracking-[0.5em] mb-8">VIP Experience</h3>
-           <ul className="space-y-4 text-sm opacity-70 tracking-widest uppercase">
-              <li>• Private Soundproof Suites</li>
-              <li>• Gourmet Party Platters</li>
-              <li>• Champagne & Spirits Menu</li>
-           </ul>
-           <button className="w-full mt-12 bg-[#D4A574] text-black py-4 rounded-full font-bold uppercase text-[10px] tracking-widest hover:bg-white transition-all">Reserve a Suite</button>
-        </div>
+        
       </section>
     </div>
   );
