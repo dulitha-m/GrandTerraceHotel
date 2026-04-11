@@ -1,120 +1,166 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // මේක අනිවාර්යයෙන්ම ඕනේ
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, Send, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { 
+  Facebook, Instagram, Mail, Phone, MapPin, 
+  ArrowUpRight, ChevronUp, Globe, ShieldCheck 
+} from 'lucide-react';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const navLinks = [
+    { name: "The Residence", path: "/" },
+    { name: "Culinary Arts", path: "/dining" },
+    { name: "Our Heritage", path: "/about" },
+    { name: "Private Events", path: "/contact" },
+    { name: "Gallery", path: "/gallery" }
+  ];
+
   return (
-    <footer className="bg-[#0c0a09] text-[#E6D5C3] pt-24 pb-12 px-6 font-sans border-t border-white/5 relative overflow-hidden">
+    <footer className="bg-[#080707] text-[#E6D5C3] pt-32 pb-8 px-8 font-sans border-t border-[#D4A574]/10 relative overflow-hidden">
       
-      {/* Background Subtle Glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4A574]/5 blur-[150px] rounded-full -z-10"></div>
+      {/* --- LUXURY BACKGROUND ELEMENTS --- */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#D4A574]/30 to-transparent"></div>
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4A574]/5 blur-[120px] rounded-full"></div>
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#D4A574]/5 blur-[120px] rounded-full"></div>
 
       <div className="max-w-[1600px] mx-auto">
         
-        {/* --- TOP SECTION: BRANDING & NEWSLETTER --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 pb-20">
+        {/* --- MAIN CONTENT SECTION --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 mb-24">
           
-          {/* Brand Identity */}
-          <div className="lg:col-span-5 space-y-10">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-serif text-white tracking-tighter">
-                GRAND <span className="text-[#D4A574] italic">TERRACE</span>
+          {/* Brand Identity & Philosophy */}
+          <div className="lg:col-span-5 space-y-12">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-3 px-4 py-2 border border-[#D4A574]/20 rounded-full bg-white/5 backdrop-blur-md">
+                <Globe size={14} className="text-[#D4A574]" />
+                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#D4A574]">Global Heritage Excellence</span>
+              </div>
+              
+              <h2 className="text-5xl md:text-6xl font-serif text-white tracking-tighter leading-tight">
+                GRAND <br />
+                <span className="text-[#D4A574] italic ml-12 md:ml-20">TERRACE</span>
               </h2>
-              <p className="text-[13px] leading-relaxed max-w-sm text-stone-400 font-light tracking-wide">
-                Sri Lanka's premier heritage escape. Where the deep essence 
-                of Roasted Cocoa meets the precision of modern luxury. Experience excellence in every stay.
+              
+              <p className="text-[15px] leading-relaxed max-w-md text-stone-400 font-light">
+                Redefining the art of Sri Lankan hospitality since 1947. 
+                A sanctuary where colonial heritage meets the pinnacle of 
+                bespoke modern luxury.
               </p>
             </div>
 
-            {/* Social Media - Gold Circle Style */}
-            <div className="flex space-x-5">
+            <div className="flex items-center gap-6">
               {[
-                { Icon: Instagram, link: "https://www.instagram.com/grand__terrace?igsh=ZWQ5ejB2anZxZXdu" },
+                { Icon: Instagram, link: "https://www.instagram.com/grand__terrace" },
                 { Icon: Facebook, link: "#" },
               ].map((social, index) => (
                 <a 
                   key={index} 
                   href={social.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 flex items-center justify-center border border-[#D4A574]/20 rounded-full text-[#D4A574] hover:bg-[#D4A574] hover:text-black transition-all duration-500 hover:-translate-y-1"
+                  className="group relative w-12 h-12 flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50"
                 >
-                  <social.Icon size={18} />
+                  <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                  <social.Icon size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Navigation */}
-          <div className="lg:col-span-3 grid grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-[#D4A574] uppercase tracking-[0.4em] text-[10px] font-black mb-10">Discover</h4>
-              <ul className="space-y-5 text-[12px] uppercase tracking-widest font-medium">
-                <li><Link to="/" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Home <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></Link></li>
-                <li><Link to="/dining" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Lounges & Bar <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></Link></li>
-                <li><Link to="/about" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">About <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></Link></li>
-                <li><Link to="/contact" className="text-stone-400 hover:text-[#D4A574] transition-colors flex items-center gap-2 group">Contact <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"/></Link></li>
+          {/* Dynamic Navigation */}
+          <div className="lg:col-span-4 grid grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <h4 className="text-white text-[11px] uppercase tracking-[0.5em] font-black opacity-40">Navigation</h4>
+              <ul className="space-y-6">
+                {navLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link to={link.path} className="text-[13px] text-stone-400 hover:text-[#D4A574] transition-all duration-300 flex items-center gap-2 group">
+                      <span className="w-0 group-hover:w-4 h-px bg-[#D4A574] transition-all duration-300"></span>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div>
-              <h4 className="text-[#D4A574] uppercase tracking-[0.4em] text-[10px] font-black mb-10">Legal</h4>
-              <ul className="space-y-5 text-[12px] uppercase tracking-widest font-medium">
-                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Reservations</Link></li>
+            
+            <div className="space-y-8">
+              <h4 className="text-white text-[11px] uppercase tracking-[0.5em] font-black opacity-40">Legal Suite</h4>
+              <ul className="space-y-6 text-[13px]">
                 <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Terms & Cond</Link></li>
-                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Cookies</Link></li>
+                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Terms of Service</Link></li>
+                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Cookie Policy</Link></li>
+                <li><Link to="#" className="text-stone-400 hover:text-white transition-colors">Sustainability</Link></li>
               </ul>
             </div>
           </div>
+
+          {/* Exclusive Contact Card */}
+          <div className="lg:col-span-3">
+            <div className="p-8 bg-white/[0.02] border border-white/5 rounded-3xl backdrop-blur-sm space-y-8 relative group hover:border-[#D4A574]/20 transition-colors duration-700">
+               <h4 className="text-[#D4A574] text-[11px] uppercase tracking-[0.4em] font-black">Concierge Desk</h4>
+               
+               <div className="space-y-6">
+                  <a href="tel:+94114998998" className="flex items-start gap-4 group/item">
+                    <Phone size={18} className="text-[#D4A574] mt-1" />
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-stone-500 mb-1">Direct Line</p>
+                      <p className="text-sm text-white font-medium">+94 11 499 8998</p>
+                    </div>
+                  </a>
+
+                  <div className="flex items-start gap-4">
+                    <MapPin size={18} className="text-[#D4A574] mt-1" />
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-stone-500 mb-1">Location</p>
+                      <p className="text-sm text-white font-medium leading-relaxed">
+                        02, York Street, Colombo 01 <br /> Sri Lanka
+                      </p>
+                    </div>
+                  </div>
+               </div>
+
+               <button className="w-full py-4 bg-stone-900 border border-white/10 rounded-xl text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-[#D4A574] hover:text-black transition-all duration-500 flex items-center justify-center gap-2">
+                  Request Callback <ArrowUpRight size={14} />
+               </button>
+            </div>
+          </div>
         </div>
 
-        {/* --- MIDDLE SECTION: LUXURY INFO STRIPS --- */}
-        <div className="py-16 border-y border-white/5 grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="flex items-center gap-6 group cursor-pointer">
-            <div className="w-14 h-14 flex items-center justify-center bg-stone-900 rounded-2xl text-[#D4A574] border border-white/5 group-hover:border-[#D4A574]/50 transition-all duration-500">
-                <MapPin size={22} />
-            </div>
-            <div className="space-y-1">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-stone-500 font-bold">Visit Us</p>
-                <p className="text-[13px] text-white font-medium tracking-wide">02, York Street, Colombo, Sri Lanka</p>
-            </div>
-          </div>
+        {/* --- BOTTOM COMPLIANCE BAR --- */}
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           
-          <div className="flex items-center gap-6 group cursor-pointer">
-            <div className="w-14 h-14 flex items-center justify-center bg-stone-900 rounded-2xl text-[#D4A574] border border-white/5 group-hover:border-[#D4A574]/50 transition-all duration-500">
-                <Phone size={22} />
-            </div>
-            <div className="space-y-1">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-stone-500 font-bold">Inquiries</p>
-                <p className="text-[13px] text-white font-medium tracking-wide">+94 11 499 8998</p>
+          <div className="flex items-center gap-8">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-stone-600 font-medium">
+              © 2026 Grand Terrace. All Rights Reserved.
+            </p>
+            <div className="hidden md:flex items-center gap-2 text-[10px] text-stone-600 border-l border-white/10 pl-8">
+              <ShieldCheck size={14} className="text-emerald-900" />
+              <span className="uppercase tracking-widest">PCI DSS Compliant</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 group cursor-pointer">
-            <div className="w-14 h-14 flex items-center justify-center bg-stone-900 rounded-2xl text-[#D4A574] border border-white/5 group-hover:border-[#D4A574]/50 transition-all duration-500">
-                <Mail size={22} />
-            </div>
-            <div className="space-y-1">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-stone-500 font-bold">Concierge</p>
-                <p className="text-[13px] text-white font-medium tracking-wide">infinityresturant@gmail.com</p>
-            </div>
-          </div>
-        </div>
+          <div className="flex items-center gap-12">
+            {/* Scroll to Top */}
+            <button 
+              onClick={scrollToTop}
+              className="flex items-center gap-3 group text-stone-500 hover:text-[#D4A574] transition-colors"
+            >
+              <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Back to Top</span>
+              <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#D4A574]/50 group-hover:-translate-y-1 transition-all duration-500">
+                <ChevronUp size={16} />
+              </div>
+            </button>
 
-        {/* --- BOTTOM SECTION: COPYRIGHT --- */}
-        <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-[9px] uppercase tracking-[0.5em] text-stone-600">
-            © 2026 Grand Terrace Hotels. Crafted for Excellence.
-          </p>
-          
-          {/* Brand/Developer Credit */}
-          <div className="flex items-center gap-4 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-            <span className="text-[9px] uppercase tracking-[0.3em] text-stone-500">Designed by</span>
-            <div className="flex items-center gap-1">
-                <div className="w-1 h-1 bg-[#D4A574] rounded-full"></div>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-[#D4A574] font-black">B & D Solutions</span>
+            {/* Developer Credit */}
+            <div className="flex items-center gap-3 pl-8 border-l border-white/10">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-stone-600">Digital Atelier</span>
+              <span className="text-[11px] uppercase tracking-[0.2em] text-[#D4A574] font-black hover:tracking-[0.3em] transition-all duration-500 cursor-pointer">
+                B & D Solutions
+              </span>
             </div>
           </div>
+
         </div>
       </div>
     </footer>
