@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useSpring, animate } from 'framer-motion';
 import baImg from "../assets/taptap.png";
-import kerImg from "../assets/ker.png";
+import kerImg from "../assets/ka.jpeg";
 import tapImg from "../assets/tapp.webp";
 import nigImg from "../assets/nig.png";
 
