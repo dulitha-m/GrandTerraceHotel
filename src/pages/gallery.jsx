@@ -10,6 +10,7 @@ import tapImg from '../assets/tt.jpeg';
 import tapbarImg from '../assets/tapbar.png';
 import niImg from '../assets/ni.png';
 import nightImg from '../assets/ka.jpeg';
+import kerImg from '../assets/ker.png';
 
 const galleryImages = [
   { url: barImg, title: "The Grand Bar", category: "Dining" },
