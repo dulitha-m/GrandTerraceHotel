@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Wine, Clock, MapPin, Beer as BeerIcon, Utensils } from 'lucide-react';
-import baImg from "../assets/ba.png";
+import baImg from "../assets/tt.jpeg";
 
 const Bar = () => {
   return (

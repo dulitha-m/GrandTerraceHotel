@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Flame, Wind, BookOpen } from 'lucide-react';
-import nigImg from "../assets/nig.png";
+import nigImg from "../assets/shi.png";
 
 const Shisha = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, Users, Heart, Star, Clock, MapPin, Phone, Mail, Utensils, Wine, ChefHat, Sparkles, History, Globe } from "lucide-react";
-import logo from "../assets/grandterrace-logo.jpeg";
+import logo from "../assets/hotel.png";
 
 export default function About() {
   return (

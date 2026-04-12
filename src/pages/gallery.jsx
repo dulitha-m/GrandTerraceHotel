@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X, Sparkles, Camera } from 'lucide-react';
 
 // --- ASSETS IMPORT ---
-import barImg from '../assets/bar.png';
+import barImg from '../assets/taptap.png';
 import karaokeImg from '../assets/karaoke.png';
-import nightsImg from '../assets/nights.jpg';
-import tapImg from '../assets/tap.png';
+import nightsImg from '../assets/shi.png';
+import tapImg from '../assets/tt.jpeg';
 import tapbarImg from '../assets/tapbar.png';
 import niImg from '../assets/ni.png';
-import nightImg from '../assets/nig.png';
+import nightImg from '../assets/ka.jpeg';
 import kerImg from '../assets/ker.png';
 
 const galleryImages = [
