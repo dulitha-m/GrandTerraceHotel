@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Music } from 'lucide-react';
-import kerImg from "../assets/ker.png";
+import kerImg from "../assets/ka.jpeg";
 
 const Karaoke = () => {
   return (
