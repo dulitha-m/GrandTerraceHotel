@@ -29,7 +29,7 @@ const Home = () => {
 
     const startAutoScroll = (fromProgress = 0) => {
       if (controls) controls.stop();
-      
+
       const remainingDuration = 30 * (1 - fromProgress);
 
       controls = animate(fromProgress, 1, {
@@ -79,7 +79,7 @@ const Home = () => {
 
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-24 md:pt-64 overflow-hidden selection:bg-[#D4A574]">
-      
+
       {/* Header */}
       <section className="text-center mb-12 px-6 relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
@@ -90,9 +90,9 @@ const Home = () => {
       </section>
 
       {/* --- MOBILE OPTIMIZED SLIDER --- */}
-      <main 
+      <main
         ref={scrollRef}
-        className="flex overflow-x-auto no-scrollbar h-[65vh] md:h-[75vh] items-center touch-pan-x cursor-grab active:cursor-grabbing"
+        className="flex overflow-x-auto no-scrollbar h-[85vh] md:h-[95vh] items-center touch-pan-x cursor-grab active:cursor-grabbing"
       >
         <div className="flex flex-nowrap gap-5 md:gap-12 px-6 md:px-[20vw]">
           {outlets.map((item) => (
