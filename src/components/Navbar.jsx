@@ -111,7 +111,7 @@ export default function Navbar() {
       </div>
 
       {/* ── MOBILE NAVBAR ── */}
-      <div className="lg:hidden bg-[#0c0a08] border-b border-[#D4A574]/0 px-5 py-4 flex items-center justify-between">
+      <div className="lg:hidden bg-[#0c0a08] border-b border-[#D4A574]/0 px-0 py-0 flex items-center justify-between">
         <button onClick={() => setOpen(!open)} className="text-[#D4A574]">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
