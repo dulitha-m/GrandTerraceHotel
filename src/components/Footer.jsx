@@ -158,7 +158,7 @@ const Footer = () => {
                Digital Atelier
             </span>
            <span className="text-[11px] tracking-[0.2em] text-[#D4A574] font-black hover:tracking-[0.3em] transition-all duration-500 cursor-pointer">
-            DuBa Tech Soluations
+            DuBaTech Soluations
           </span>
 </div>
           </div>
