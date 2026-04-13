@@ -96,8 +96,8 @@ const Home = () => {
       >
         <div className="flex flex-nowrap gap-5 md:gap-12 px-6 md:px-[20vw]">
           {outlets.map((item) => (
-            <section key={item.id} className="w-[85vw] md:w-[480px] flex-shrink-0">
-              <div className="relative aspect-[9/14] md:aspect-[9/15] overflow-hidden rounded-[40px] md:rounded-[60px] border border-white/5 shadow-2xl group">
+            <section key={item.id} className="h-[55vh] md:h-[65vh] flex-shrink-0">
+              <div className="h-full aspect-[9/14] md:aspect-[9/15] relative overflow-hidden rounded-[40px] md:rounded-[60px] border border-white/5 shadow-2xl group">
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover opacity-70" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
