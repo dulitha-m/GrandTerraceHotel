@@ -36,9 +36,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[999] w-full transition-all duration-500 bg-[#0a0908] ${
-        scrolled ? "shadow-[0_10px_40px_rgba(0,0,0,0.8)]" : ""
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[999] w-full transition-all duration-500 bg-[#0a0908] ${scrolled ? "shadow-[0_10px_40px_rgba(0,0,0,0.8)]" : ""
+        }`}
     >
       {/* ── TOP STRIP (Poddakwath hidasak nathi wenna border-top reset kala) ── */}
       <div className="hidden lg:block bg-[#0a0908] border-b border-[#D4A574]/10 m-0 p-0">
@@ -49,7 +48,7 @@ export default function Navbar() {
             </span>
             <span className="text-[#2a2520]">|</span>
             <span className="font-serif italic text-[13px] text-[#8a7a6a]">
-              Heritage Excellence 
+              Heritage Excellence
             </span>
           </div>
 
@@ -81,8 +80,7 @@ export default function Navbar() {
                 <NavLink
                   to={link.to}
                   className={({ isActive }) =>
-                    `font-sans text-[13px] font-extrabold uppercase tracking-[0.18em] px-6 py-2 transition-all duration-300 ${
-                      isActive ? "text-[#D4A574]" : "text-[#c8b8a8] hover:text-[#D4A574]"
+                    `font-sans text-[13px] font-extrabold uppercase tracking-[0.18em] px-6 py-2 transition-all duration-300 ${isActive ? "text-[#D4A574]" : "text-[#c8b8a8] hover:text-[#D4A574]"
                     }`
                   }
                 >
@@ -113,16 +111,13 @@ export default function Navbar() {
       </div>
 
       {/* ── MOBILE NAVBAR ── */}
-      <div className="lg:hidden bg-[#0c0a08] border-b border-[#D4A574]/10 px-5 py-4 flex items-center justify-between">
+      <div className="lg:hidden bg-[#0c0a08] border-b border-gold/10 px-5 py-4 flex items-center justify-between">
         <button onClick={() => setOpen(!open)} className="text-[#D4A574]">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
         <Link to="/">
           <img src={MainLogo} alt="Logo" className="h-10 w-auto brightness-110" />
         </Link>
-        <button className="bg-[#D4A574] text-black px-5 py-2 text-[10px] font-black uppercase rounded-sm">
-          Book
-        </button>
       </div>
 
       {/* ── MOBILE OVERLAY MENU ── */}
@@ -141,8 +136,7 @@ export default function Navbar() {
                   to={link.to}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `font-serif text-[26px] tracking-[0.1em] uppercase transition-colors ${
-                      isActive ? "text-[#D4A574]" : "text-[#c8b8a8] hover:text-[#D4A574]"
+                    `font-serif text-[26px] tracking-[0.1em] uppercase transition-colors ${isActive ? "text-[#D4A574]" : "text-[#c8b8a8] hover:text-[#D4A574]"
                     }`
                   }
                 >
