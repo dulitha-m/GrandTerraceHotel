@@ -111,13 +111,15 @@ export default function Navbar() {
       </div>
 
       {/* ── MOBILE NAVBAR ── */}
-      <div className="lg:hidden bg-[#0c0a08] border-b border-gold/10 px-5 py-4 flex items-center justify-between">
+      <div className="lg:hidden bg-[#0c0a08] border-b border-[#D4A574]/10 px-5 py-4 flex items-center justify-between">
         <button onClick={() => setOpen(!open)} className="text-[#D4A574]">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
         <Link to="/">
           <img src={MainLogo} alt="Logo" className="h-10 w-auto brightness-110" />
         </Link>
+        {/* Spacer to keep the logo centered */}
+        <div className="w-14" />
       </div>
 
       {/* ── MOBILE OVERLAY MENU ── */}
