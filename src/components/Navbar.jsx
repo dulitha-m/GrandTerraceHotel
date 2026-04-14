@@ -119,7 +119,7 @@ export default function Navbar() {
           <img src={MainLogo} alt="Logo" className="h-10 w-auto brightness-110" />
         </Link>
         {/* Spacer to keep flex layout balanced */}
-        <div className="w-[28px]" />
+        <div className="w-14" />
       </div>
 
       {/* ── MOBILE OVERLAY MENU ── */}
