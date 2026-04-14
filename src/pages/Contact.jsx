@@ -13,7 +13,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-[#0c0a09] selection:bg-[#D4A574] selection:text-black">
-      
+
       {/* --- HERO SECTION --- */}
       <section className="relative pt-48 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
@@ -27,6 +27,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <br></br>
             <span className="text-[#D4A574] text-[10px] tracking-[0.6em] uppercase font-black mb-6 block">✦ Connect With Excellence ✦</span>
             <h1 className="text-6xl md:text-8xl font-serif text-[#E6D5C3] mb-8 leading-tight">
               Get <span className="italic font-light lowercase text-[#D4A574]">in</span> Touch
@@ -42,7 +43,7 @@ export default function Contact() {
       <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-16">
-            
+
             {/* LEFT SIDE: INFO */}
             <div className="lg:col-span-5 space-y-10">
               <div>
@@ -51,27 +52,27 @@ export default function Contact() {
               </div>
 
               <div className="space-y-4">
-                <ContactInfoCard 
-                  icon={<MapPin size={22} />} 
-                  title="Heritage Location" 
+                <ContactInfoCard
+                  icon={<MapPin size={22} />}
+                  title="Heritage Location"
                   value="02, York Street, Colombo 01"
                   subValue="Sri Lanka"
                 />
-                <ContactInfoCard 
-                  icon={<Phone size={22} />} 
-                  title="Direct Line" 
+                <ContactInfoCard
+                  icon={<Phone size={22} />}
+                  title="Direct Line"
                   value="+94 114 998 998"
                   subValue="Concierge Desk"
                 />
-                <ContactInfoCard 
-                  icon={<Mail size={22} />} 
-                  title="Email Inquiry" 
+                <ContactInfoCard
+                  icon={<Mail size={22} />}
+                  title="Email Inquiry"
                   value="infinityresturant@gmail.com"
                   subValue="Response within 2 hours"
                 />
-                <ContactInfoCard 
-                  icon={<Clock size={22} />} 
-                  title="Operating Hours" 
+                <ContactInfoCard
+                  icon={<Clock size={22} />}
+                  title="Operating Hours"
                   value="Daily: 11:00 AM - 11:00 PM"
                   subValue="Open 365 Days"
                 />
@@ -81,8 +82,8 @@ export default function Contact() {
                 <p className="text-[10px] uppercase tracking-[0.5em] text-[#D4A574] font-bold mb-6 italic text-center lg:text-left">Follow the Legacy</p>
                 <div className="flex justify-center lg:justify-start gap-4">
                   {[<Instagram />, <Facebook />, <Twitter />].map((icon, i) => (
-                    <motion.a 
-                      key={i} href="#" 
+                    <motion.a
+                      key={i} href="#"
                       whileHover={{ scale: 1.1, backgroundColor: '#D4A574', color: '#000' }}
                       className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white transition-all"
                     >
@@ -94,7 +95,7 @@ export default function Contact() {
             </div>
 
             {/* RIGHT SIDE: FORM */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               className="lg:col-span-7"
@@ -102,7 +103,7 @@ export default function Contact() {
               <div className="bg-stone-900/40 backdrop-blur-xl border border-white/5 p-8 md:p-12 rounded-[40px] shadow-2xl relative overflow-hidden">
                 <AnimatePresence>
                   {submitted && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0 }}
@@ -136,8 +137,8 @@ export default function Contact() {
 
                   <div className="flex flex-col">
                     <label className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#D4A574] mb-3">Your Message</label>
-                    <textarea 
-                      rows="5" 
+                    <textarea
+                      rows="5"
                       required
                       placeholder="How may we assist you today?"
                       className="bg-white/5 border border-white/10 p-6 rounded-2xl text-stone-300 focus:border-[#D4A574] outline-none transition-all resize-none text-sm leading-relaxed"
@@ -151,7 +152,7 @@ export default function Contact() {
                     </p>
                   </div>
 
-                  <motion.button 
+                  <motion.button
                     whileHover={{ scale: 1.02, backgroundColor: '#fff', color: '#000' }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full bg-[#D4A574] text-black py-5 rounded-full font-black uppercase tracking-[0.4em] text-xs transition-all shadow-xl shadow-[#D4A574]/10"
@@ -173,7 +174,7 @@ export default function Contact() {
               <span className="text-[#D4A574] text-[10px] tracking-[0.5em] uppercase font-bold mb-4 block underline underline-offset-8">Directions</span>
               <h2 className="text-4xl md:text-5xl font-serif text-white italic">Visit the <span className="text-[#D4A574]">Grand Terrace</span></h2>
             </div>
-            <motion.a 
+            <motion.a
               href="https://maps.google.com" target="_blank"
               whileHover={{ x: 10 }}
               className="text-white text-xs uppercase tracking-widest font-bold flex items-center gap-4 border-b border-[#D4A574] pb-2"
@@ -181,14 +182,14 @@ export default function Contact() {
               Open in Google Maps <ArrowRight size={16} className="text-[#D4A574]" />
             </motion.a>
           </div>
-          
+
           <div className="relative h-[500px] w-full rounded-[40px] overflow-hidden border border-white/5 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
-             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.791552554625!2d79.8454!3d6.9319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593d6e903f0b%3A0x6a0a09e09d10!2sColombo%20Fort!5e0!3m2!1sen!2slk!4v1708300000000!5m2!1sen!2slk"
-                width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" 
-                title="Grand Terrace Map"
-             />
-             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0c0a09] via-transparent to-transparent" />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.791552554625!2d79.8454!3d6.9319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593d6e903f0b%3A0x6a0a09e09d10!2sColombo%20Fort!5e0!3m2!1sen!2slk!4v1708300000000!5m2!1sen!2slk"
+              width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
+              title="Grand Terrace Map"
+            />
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0c0a09] via-transparent to-transparent" />
           </div>
         </div>
       </section>
@@ -199,7 +200,7 @@ export default function Contact() {
 // Update components to Dark Theme
 function ContactInfoCard({ icon, title, value, subValue }) {
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ x: 10 }}
       className="flex items-center gap-6 p-6 rounded-3xl bg-white/5 border border-white/5 hover:border-[#D4A574]/30 transition-all"
     >
@@ -221,7 +222,7 @@ function DarkField({ label, placeholder, type = "text", required = false }) {
       <label className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#D4A574] mb-3">
         {label} {required && <span className="text-red-500">*</span>}
       </label>
-      <input 
+      <input
         type={type} placeholder={placeholder} required={required}
         className="bg-white/5 border border-white/10 px-6 py-4 rounded-2xl text-stone-300 focus:border-[#D4A574] outline-none transition-all text-sm placeholder:text-stone-700 font-light"
       />
