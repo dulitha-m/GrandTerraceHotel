@@ -12,7 +12,7 @@ const Karaoke = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] to-transparent"></div>
         <div className="relative z-10 w-full max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-2 text-[#D4A574] text-[10px] uppercase tracking-widest mb-8 font-bold"><ArrowLeft size={16} /> Back</Link>
-          <h1 className="text-6xl md:text-9xl uppercase tracking-tight">Karaoke</h1>
+          <h1 className="text-6xl md:text-9xl uppercase tracking-tight">Governor's Mic Karaoke</h1>
         </div>
       </section>
 
@@ -21,7 +21,7 @@ const Karaoke = () => {
           <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">Sing in Luxury</h2>
           <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"Private suites for your inner rockstar. High-end sound systems, personalized service, and memories that last a lifetime."</p>
         </div>
-        
+
       </section>
     </div>
   );
