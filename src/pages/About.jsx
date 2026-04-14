@@ -6,7 +6,7 @@ import logo from "../assets/hotel.png";
 export default function About() {
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black">
-      
+
       {/* --- HERO SECTION: THE LEGACY --- */}
       <section className="relative py-32 px-6 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#D4A574]/10 blur-[150px] rounded-full"></div>
@@ -25,7 +25,7 @@ export default function About() {
           >
             <History size={12} /> Since 2010
           </motion.div>
-          
+
           <h1 className="text-6xl md:text-9xl font-serif text-white mb-8 leading-[0.9]">
             The Spirit of <br />
             <span className="italic text-[#D4A574] font-light">Heritage</span>
@@ -41,7 +41,6 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             <StatItem icon={<ChefHat />} value="08" label="Master Culinarians" />
-            <StatItem icon={<Award />} value="12" label="Culinary Awards" />
             <StatItem icon={<Globe />} value="04" label="Global Concepts" />
             <StatItem icon={<Users />} value="25K+" label="Distinguished Guests" />
           </div>
@@ -52,7 +51,7 @@ export default function About() {
       <section className="py-40 px-6">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
-            
+
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -72,7 +71,7 @@ export default function About() {
                 </p>
 
                 <p>
-                  Established in the heart of Colombo, Grand Terrace was born from a passion to revive the 
+                  Established in the heart of Colombo, Grand Terrace was born from a passion to revive the
                   essence of premium nightlife while blending modern experiences with timeless hospitality.
                 </p>
 
@@ -97,13 +96,13 @@ export default function About() {
                   className="w-full max-w-[300px] mx-auto mb-12 grayscale group-hover:grayscale-0 transition-all duration-1000"
                 />
                 <div className="space-y-6">
-                   <div className="h-[1px] w-20 bg-[#D4A574] mx-auto"></div>
-                   <p className="text-[10px] uppercase tracking-[0.5em] text-stone-500 font-bold">Official Seal of Excellence</p>
-                   <div className="flex justify-center gap-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={14} className="fill-[#D4A574] text-[#D4A574]" />
-                      ))}
-                   </div>
+                  <div className="h-[1px] w-20 bg-[#D4A574] mx-auto"></div>
+                  <p className="text-[10px] uppercase tracking-[0.5em] text-stone-500 font-bold">Official Seal of Excellence</p>
+                  <div className="flex justify-center gap-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} size={14} className="fill-[#D4A574] text-[#D4A574]" />
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
