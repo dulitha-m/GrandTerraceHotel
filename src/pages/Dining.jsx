@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Wine, Download, ArrowRight, Flame, Zap, Beer as BeerIcon, Utensils, Wind } from 'lucide-react';
+import { Wine, ArrowRight, Flame, Zap, Beer as BeerIcon, Utensils, Wind, ExternalLink } from 'lucide-react';
 import { diningOutlets } from '../data/diningData';
 
-// PDF Imports
 // PDF Paths
 const governorsBarMenu = "/menus/Bite_Menu.pdf";
 const karaokeSuiteMenu = "/menus/Bar_Menu.pdf";
@@ -112,22 +111,41 @@ const Dining = () => {
                   <div className="flex flex-wrap gap-4 pt-4">
                     {isGovernorsBar ? (
                       <>
-                        <a href={tapBarMenu} download="Beer_Menu.pdf" className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full">
+                        <a 
+                          href={tapBarMenu} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+                        >
                           <BeerIcon size={14} /> Beer Menu
                         </a>
-                        <a href={karaokeSuiteMenu} download="Bar_Menu.pdf" className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full">
+                        <a 
+                          href={karaokeSuiteMenu} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+                        >
                           <Wine size={14} /> Bar Menu
                         </a>
-                        <a href={governorsBarMenu} download="Bite_Menu.pdf" className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full">
+                        <a 
+                          href={governorsBarMenu} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+                        >
                           <Utensils size={14} /> Bite Menu
                         </a>
                       </>
                     ) : isIstanbul ? (
-                      /* Istanbul Nights lassanata icons ekka menu eka download wenna */
-                      <a href={istanbulMenu} download="Istanbul_Nights_Menu.pdf" className="flex-1 md:flex-none border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-10 py-5 text-[11px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-3 rounded-full">
+                      <a 
+                        href={istanbulMenu} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex-1 md:flex-none border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-10 py-5 text-[11px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-3 rounded-full"
+                      >
                         <Wind className="text-[#D4A574]" size={16} /> 
-                        Shisha Menu 
-                        <Download size={14} />
+                        View Shisha Menu 
+                        <ExternalLink size={14} />
                       </a>
                     ) : (isKaraoke || isTapBar) ? (
                       null 
