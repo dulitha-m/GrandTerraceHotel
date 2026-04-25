@@ -175,7 +175,7 @@ export default function Contact() {
               <h2 className="text-4xl md:text-5xl font-serif text-white italic">Visit the <span className="text-[#D4A574]">Grand Terrace</span></h2>
             </div>
             <motion.a
-              href="https://maps.google.com" target="_blank"
+              href="https://maps.app.goo.gl/k1eY3y4HyzrnU52S9" target="_blank"
               whileHover={{ x: 10 }}
               className="text-white text-xs uppercase tracking-widest font-bold flex items-center gap-4 border-b border-[#D4A574] pb-2"
             >
@@ -185,7 +185,7 @@ export default function Contact() {
 
           <div className="relative h-[500px] w-full rounded-[40px] overflow-hidden border border-white/5 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.791552554625!2d79.8454!3d6.9319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593d6e903f0b%3A0x6a0a09e09d10!2sColombo%20Fort!5e0!3m2!1sen!2slk!4v1708300000000!5m2!1sen!2slk"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15842.427838561735!2d79.8398418!3d6.9360824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25968efb6ed09%3A0x24dd28f88e938be7!2sGRAND%20TERRACE!5e0!3m2!1sen!2slk!4v1714030613000!5m2!1sen!2slk"
               width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
               title="Grand Terrace Map"
             />

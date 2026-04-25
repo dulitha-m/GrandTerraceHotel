@@ -4,10 +4,11 @@ import { Wine, Download, ArrowRight, Flame, Zap, Beer as BeerIcon, Utensils, Win
 import { diningOutlets } from '../data/diningData';
 
 // PDF Imports
-import governorsBarMenu from "../menus/bite menu.pdf";
-import karaokeSuiteMenu from "../menus/bar menu.pdf";
-import tapBarMenu from "../menus/beer menu.pdf";
-import istanbulMenu from "../menus/istanbul-nights-menu.pdf";
+// PDF Paths
+const governorsBarMenu = "/menus/Bite_Menu.pdf";
+const karaokeSuiteMenu = "/menus/Bar_Menu.pdf";
+const tapBarMenu = "/menus/Beer_Menu.pdf";
+const istanbulMenu = "/menus/Istanbul_Nights_Menu.pdf";
 
 const Dining = () => {
   return (
@@ -102,7 +103,7 @@ const Dining = () => {
                       <Flame className="text-[#D4A574] shrink-0" size={18} />
                       <div>
                         <span className="block text-[9px] uppercase text-stone-500 tracking-[0.2em] font-bold mb-1">Timing</span>
-                        <span className="text-[13px] text-stone-200">{outlet.openingHours}</span>
+                        <span className="text-[13px] text-stone-200">2pm to midnight</span>
                       </div>
                     </div>
                   </div>

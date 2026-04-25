@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Beer } from 'lucide-react';
+import { ArrowLeft, Beer, Clock, MapPin } from 'lucide-react';
 import tapImg from "../assets/taptap.png";
 
 const TapBar = () => {
@@ -18,8 +18,14 @@ const TapBar = () => {
 
       <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
         <div>
-          <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">Crafted & Chilled</h2>
-          <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"The city's heartbeat. 10+ craft beers on tap, live sports, and the ultimate pub atmosphere for the modern explorer."</p>
+          <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">Tap Bar – Established 1875</h2>
+          <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"Founded in 1875, Tap Bar stands as a timeless landmark where history, character, and tradition come together—serving craft and draft beers on tap and amazing bar bites with live sporting events and great music, creating lasting experiences for the modern-day explorer."</p>
+          <div className="flex gap-10 pt-10 border-t border-white/5">
+            <div className="flex items-center gap-3">
+              <Clock className="text-[#D4A574]" size={18}/>
+              <span className="text-xs tracking-widest">2pm to midnight</span>
+            </div>
+          </div>
         </div>
         
       </section>

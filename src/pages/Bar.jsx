@@ -36,20 +36,22 @@ const Bar = () => {
       <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
         <div className="space-y-8">
           <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black italic">
-            The Spirit of Heritage
+            Spirits of heritage on York street Colombo 01(fort)
+
           </h2>
           <p className="text-2xl md:text-3xl font-light leading-relaxed opacity-80 italic">
-            "Colombo's most refined sanctuary for connoisseurs. Experience an unrivaled collection of rare malts and master-crafted signature cocktails."
+            "Collection of arrack ,malts ,signature cocktails, shooters, superb Sri Lankan bar bites with live music amazing lighting a live sporting events on giant screens while you party on the grand terrace 
+This is an out door smoking friendly area"
           </p>
           
           <div className="flex gap-10 pt-10 border-t border-white/5">
             <div className="flex items-center gap-3">
               <Clock className="text-[#D4A574]" size={18}/>
-              <span className="text-xs tracking-widest uppercase">12PM - 2AM</span>
+              <span className="text-xs tracking-widest">2pm to midnight</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="text-[#D4A574]" size={18}/>
-              <span className="text-xs tracking-widest uppercase">Lobby Level</span>
+              <span className="text-xs tracking-widest uppercase">terrace</span>
             </div>
           </div>
 

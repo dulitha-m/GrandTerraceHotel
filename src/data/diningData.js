@@ -3,10 +3,7 @@ import kerImg from "../assets/ka.jpeg";
 import tapImg from "../assets/taptap.png";
 import nigImg from "../assets/shi.png";
 
-import governorsBarMenu from "../menus/bite menu.pdf";
-import karaokeSuiteMenu from "../menus/bar menu.pdf";
-import tapBarMenu from "../menus/beer menu.pdf";
-import istanbulMenu from "../menus/istanbul-nights-menu.pdf";
+// No PDF imports needed since they are in the public folder
 
 export const diningOutlets = [
   {
@@ -18,7 +15,7 @@ export const diningOutlets = [
     image: baImg,
     openingHours: "11:00 AM - 11:00 PM",
     dressCode: "Smart Casual / Formal",
-    menuLink: governorsBarMenu,
+    menuLink: "/menus/Bite_Menu.pdf",
   },
   {
     id: 2,
@@ -29,7 +26,7 @@ export const diningOutlets = [
     image: kerImg,
     openingHours: "06:00 PM - 02:00 AM",
     dressCode: "Casual",
-    menuLink: karaokeSuiteMenu,
+    menuLink: "/menus/Bar_Menu.pdf",
   },
   {
     id: 3,
@@ -40,7 +37,7 @@ export const diningOutlets = [
     image: tapImg,
     openingHours: "04:00 PM - 12:00 AM",
     dressCode: "Casual / Trendy",
-    menuLink: tapBarMenu,
+    menuLink: "/menus/Beer_Menu.pdf",
   },
   {
     id: 4,
@@ -51,6 +48,6 @@ export const diningOutlets = [
     image: nigImg,
     openingHours: "06:00 PM - 03:00 AM",
     dressCode: "Evening Wear / Smart Casual",
-    menuLink: istanbulMenu,
+    menuLink: "/menus/Istanbul_Nights_Menu.pdf",
   },
 ];

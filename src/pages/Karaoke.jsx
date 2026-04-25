@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Music } from 'lucide-react';
+import { ArrowLeft, Music, Clock, MapPin } from 'lucide-react';
 import kerImg from "../assets/ka.jpeg";
 
 const Karaoke = () => {
@@ -18,8 +18,9 @@ const Karaoke = () => {
 
       <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
         <div>
-          <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">Sing in Luxury</h2>
-          <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"Private suites for your inner rockstar. High-end sound systems, personalized service, and memories that last a lifetime."</p>
+          <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">Sing alone at the governors music suite</h2>
+          <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"A beautifully decorated music suites keeping to the ancient charm of the grand oriental hotel brings out the inner rockstar in you high-end sound system, projections, personalized service ,amazing drinks and memories that last a lifetime"
+          </p>
         </div>
 
       </section>
