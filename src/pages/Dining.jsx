@@ -12,7 +12,7 @@ const istanbulMenu = "/menus/Istanbul_Nights_Menu.pdf";
 const Dining = () => {
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black">
-      
+
       {/* --- HERO SECTION --- */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -111,44 +111,44 @@ const Dining = () => {
                   <div className="flex flex-wrap gap-4 pt-4">
                     {isGovernorsBar ? (
                       <>
-                        <a 
-                          href={tapBarMenu} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href={tapBarMenu}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
                         >
                           <BeerIcon size={14} /> Beer Menu
                         </a>
-                        <a 
-                          href={karaokeSuiteMenu} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href={karaokeSuiteMenu}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
                         >
                           <Wine size={14} /> Bar Menu
                         </a>
-                        <a 
-                          href={governorsBarMenu} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href={governorsBarMenu}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
                         >
                           <Utensils size={14} /> Bite Menu
                         </a>
                       </>
                     ) : isIstanbul ? (
-                      <a 
-                        href={istanbulMenu} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href={istanbulMenu}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex-1 md:flex-none border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-10 py-5 text-[11px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-3 rounded-full"
                       >
-                        <Wind className="text-[#D4A574]" size={16} /> 
-                        View Shisha Menu 
+                        <Wind className="text-[#D4A574]" size={16} />
+                        View Shisha Menu
                         <ExternalLink size={14} />
                       </a>
                     ) : (isKaraoke || isTapBar) ? (
-                      null 
+                      null
                     ) : null}
                   </div>
                 </div>
@@ -169,7 +169,7 @@ const Dining = () => {
             "Sip, socialize, and savor the finest moments in Colombo."
           </p>
           <div className="flex justify-center">
-             <div className="w-20 h-[1px] bg-[#D4A574]/30"></div>
+            <div className="w-20 h-[1px] bg-[#D4A574]/30"></div>
           </div>
         </div>
       </section>
