@@ -45,16 +45,8 @@ const Bar = () => {
 This is an out door smoking friendly area"
           </p>
           
-          <div className="flex gap-10 pt-10 border-t border-white/5">
-            <div className="flex items-center gap-3">
-              <Clock className="text-[#D4A574]" size={18}/>
-              <span className="text-xs tracking-widest">2pm to midnight</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="text-[#D4A574]" size={18}/>
-              <span className="text-xs tracking-widest uppercase">terrace</span>
-            </div>
-          </div>
+          {/* Time and Location Moved below the logo */}
+
 
           {/* --- MENUS ADDED HERE --- */}
           <div className="pt-8">
@@ -103,6 +95,18 @@ This is an out door smoking friendly area"
               className="w-full h-full object-contain transition-transform duration-[2s] group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+
+          {/* Info Badges */}
+          <div className="flex justify-center gap-10 mt-10">
+            <div className="flex items-center gap-3">
+              <Clock className="text-[#D4A574]" size={18}/>
+              <span className="text-[10px] tracking-widest uppercase font-bold">2pm to midnight</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="text-[#D4A574]" size={18}/>
+              <span className="text-[10px] tracking-widest uppercase font-bold">terrace</span>
+            </div>
           </div>
         </motion.div>
       </section>

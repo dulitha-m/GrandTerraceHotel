@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Flame, Wind, BookOpen, Clock, MapPin } from 'lucide-react';
 import nigImg from "../assets/shi.png";
+import niLogo from "../assets/ni.png";
 
 const Shisha = () => {
   return (
@@ -42,12 +43,8 @@ const Shisha = () => {
             "Transport yourself to the heart of Turkey mocktails, fresh juice with Mediterranean bites, and starlit views of the city."
           </p>
 
-          <div className="flex gap-10 pt-10 border-t border-white/5">
-            <div className="flex items-center gap-3">
-              <Clock className="text-[#D4A574]" size={18}/>
-              <span className="text-xs tracking-widest">2pm to midnight</span>
-            </div>
-          </div>
+          {/* Time and Location moved below the logo */}
+
 
           {/* --- SHISHA MENU DOWNLOAD BUTTON --- */}
           <div className="pt-8">
@@ -66,6 +63,32 @@ const Shisha = () => {
           </div>
         </div>
 
+        {/* Image Section */}
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="relative group"
+        >
+          <div className="absolute -inset-4 border border-[#D4A574]/15 rounded-[40px] transition-all duration-700 group-hover:scale-105"></div>
+          <div className="relative overflow-hidden rounded-[30px] z-10 shadow-3xl bg-stone-900/50 border border-white/5 flex items-center justify-center p-8 md:p-12">
+            <img
+              src={niLogo}
+              alt="Istanbul Nights Logo"
+              className="w-full h-full object-contain transition-transform duration-[2s] group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+
+          {/* Info Badges */}
+          <div className="flex justify-center gap-10 mt-10">
+            <div className="flex items-center gap-3">
+              <Clock className="text-[#D4A574]" size={18} />
+              <span className="text-[10px] tracking-widest uppercase font-bold">2pm to midnight</span>
+            </div>
+          </div>
+        </motion.div>
       </section>
     </div>
   );

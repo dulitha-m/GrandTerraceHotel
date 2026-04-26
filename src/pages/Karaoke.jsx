@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Music, Clock, MapPin } from 'lucide-react';
 import kerImg from "../assets/ka.jpeg";
+import karaokeLogo from "../assets/karaoke.png";
 
 const Karaoke = () => {
   return (
@@ -23,6 +24,24 @@ const Karaoke = () => {
           </p>
         </div>
 
+        {/* Image Section */}
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="relative group"
+        >
+          <div className="absolute -inset-4 border border-[#D4A574]/15 rounded-[40px] transition-all duration-700 group-hover:scale-105"></div>
+          <div className="relative overflow-hidden rounded-[30px] z-10 shadow-3xl bg-stone-900/50 border border-white/5 flex items-center justify-center p-8 md:p-12">
+            <img 
+              src={karaokeLogo} 
+              alt="Karaoke Logo" 
+              className="w-full h-full object-contain transition-transform duration-[2s] group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+        </motion.div>
       </section>
     </div>
   );
