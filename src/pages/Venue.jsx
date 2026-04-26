@@ -14,7 +14,7 @@ export default function Venue() {
         <div className="card p-8">
           <div className="font-display text-2xl">Venue not found</div>
           <p className="mt-2 text-sm text-black/70">
-            The venue ID in the URL doesn’t match your data. Check <span className="font-mono">src/data/venues.js</span>.
+            The venue ID in the URL doesn't match your data. Check <span className="font-mono">src/data/venues.js</span>.
           </p>
           <Link to="/dining" className="btn-outline mt-6">
             <ArrowLeft size={18} /> Back to dining
