@@ -39,15 +39,9 @@ const galleryImages = [
   { url: midoriImg, title: "Premium Spirits", category: "Bar" },
 ];
 
-const categories = ["All", "Bar", "Dining", "Entertainment", "Ambiance"];
 
 export default function GalleryPage() {
-  const [filter, setFilter] = useState("All");
   const [selectedImg, setSelectedImg] = useState(null);
-
-  const filteredImages = filter === "All"
-    ? galleryImages
-    : galleryImages.filter(img => img.category === filter || img.category.includes(filter));
 
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-40 pb-24 selection:bg-[#D4A574] selection:text-black overflow-hidden">
@@ -90,26 +84,10 @@ export default function GalleryPage() {
           </motion.p>
         </header>
 
-        {/* --- FILTER BUTTONS --- */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-8 py-2.5 rounded-full text-[10px] tracking-[0.3em] uppercase transition-all duration-500 border ${filter === cat
-                  ? "bg-[#D4A574] text-black border-[#D4A574] shadow-[0_0_20px_rgba(212,165,116,0.2)]"
-                  : "border-white/10 text-stone-500 hover:border-[#D4A574]/40 hover:text-[#D4A574]"
-                }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
         {/* --- GALLERY GRID --- */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
           <AnimatePresence mode='popLayout'>
-            {filteredImages.map((img) => (
+            {galleryImages.map((img) => (
               <motion.div
                 layout
                 key={img.title}
