@@ -10,18 +10,36 @@ import tapImg from '../assets/tt.jpeg';
 import tapbarImg from '../assets/tapbar.png';
 import niImg from '../assets/ni.png';
 import nightImg from '../assets/ka.jpeg';
+import adoImg from '../assets/ado.png';
+import casavaImg from '../assets/casava.png';
+import fishImg from '../assets/fish.png';
+import guitarImg from '../assets/guitar.png';
+import issoImg from '../assets/isso.png';
+import micImg from '../assets/mic.png';
+import midoriImg from '../assets/midori.png';
+import wadeImg from '../assets/wade.png';
+import welcomeImg from '../assets/welcome.png';
 
 const galleryImages = [
-  { url: barImg, title: "The Grand Bar", category: "Dining" },
+  { url: barImg, title: "The Grand Bar", category: "Bar" },
   { url: karaokeImg, title: "Karaoke Lounge", category: "Entertainment" },
   { url: nightsImg, title: "Heritage Nights", category: "Ambiance" },
   { url: tapImg, title: "Premium Tap Room", category: "Bar" },
-  { url: tapbarImg, title: "Tap Bar Interior", category: "Dining" },
-  { url: niImg, title: "Signature Cocktails", category: "Mixology" },
-  { url: nightImg, title: "Evening Glow", category: "Vibe" },
+  { url: tapbarImg, title: "Tap Bar Interior", category: "Bar" },
+  { url: niImg, title: "Signature Cocktails", category: "Bar" },
+  { url: nightImg, title: "Evening Glow", category: "Ambiance" },
+  { url: welcomeImg, title: "Grand Welcome", category: "Ambiance" },
+  { url: adoImg, title: "Signature Dish", category: "Dining" },
+  { url: casavaImg, title: "Local Favorites", category: "Dining" },
+  { url: fishImg, title: "Ocean's Bounty", category: "Dining" },
+  { url: issoImg, title: "Fresh Seafood", category: "Dining" },
+  { url: wadeImg, title: "Traditional Bites", category: "Dining" },
+  { url: guitarImg, title: "Live Rhythms", category: "Entertainment" },
+  { url: micImg, title: "Acoustic Evenings", category: "Entertainment" },
+  { url: midoriImg, title: "Premium Spirits", category: "Bar" },
 ];
 
-const categories = ["All", "Shisha", "Bar", "Entertainment"];
+const categories = ["All", "Bar", "Dining", "Entertainment", "Ambiance"];
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
