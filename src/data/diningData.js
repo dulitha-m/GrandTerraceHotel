@@ -1,7 +1,7 @@
 import baImg from "../assets/tt.jpeg";
 import kerImg from "../assets/ka.jpeg";
-import tapImg from "../assets/taptap.png";
-import nigImg from "../assets/shi.png";
+import tapImg from "../assets/taptap.jpeg";
+import nigImg from "../assets/shi.jpeg";
 
 // No PDF imports needed since they are in the public folder
 

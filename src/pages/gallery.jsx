@@ -3,9 +3,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X, Sparkles, Camera } from 'lucide-react';
 
 // --- ASSETS IMPORT ---
-import barImg from '../assets/taptap.png';
+import barImg from '../assets/taptap.jpeg';
+import cocktailgreenImg from '../assets/cocktailgreen.jpeg';
+import cocktailredImg from '../assets/cocktailred.jpeg';
+import kareokepImg from '../assets/kareokep.jpeg';
+import kareoketwoImg from '../assets/kareoketwo.jpeg';
+import micstwoImg from '../assets/micstwo.jpeg';
+import shishaImg from '../assets/shisha.jpeg';
+import shotblueImg from '../assets/shotblue.jpeg';
+import shotgreenImg from '../assets/shotgreen.jpeg';
+import terracevibeImg from '../assets/terracevibe.jpeg';
 import karaokeImg from '../assets/karaoke.png';
-import nightsImg from '../assets/shi.png';
+import nightsImg from '../assets/shi.jpeg';
 import tapImg from '../assets/tt.jpeg';
 import tapbarImg from '../assets/tapbar.png';
 import niImg from '../assets/ni.png';
@@ -18,7 +27,7 @@ import issoImg from '../assets/isso.png';
 import micImg from '../assets/mic.png';
 import midoriImg from '../assets/midori.png';
 import wadeImg from '../assets/wade.png';
-import welcomeImg from '../assets/welcome.png';
+import cig from '../assets/cig.jpeg';
 
 const galleryImages = [
   { url: barImg, title: "The Grand Bar", category: "Bar" },
@@ -28,7 +37,6 @@ const galleryImages = [
   { url: tapbarImg, title: "Tap Bar Interior", category: "Bar" },
   { url: niImg, title: "Signature Cocktails", category: "Bar" },
   { url: nightImg, title: "Evening Glow", category: "Ambiance" },
-  { url: welcomeImg, title: "Grand Welcome", category: "Ambiance" },
   { url: adoImg, title: "Signature Dish", category: "Dining" },
   { url: casavaImg, title: "Local Favorites", category: "Dining" },
   { url: fishImg, title: "Ocean's Bounty", category: "Dining" },
@@ -37,8 +45,17 @@ const galleryImages = [
   { url: guitarImg, title: "Live Rhythms", category: "Entertainment" },
   { url: micImg, title: "Acoustic Evenings", category: "Entertainment" },
   { url: midoriImg, title: "Premium Spirits", category: "Bar" },
+  { url: cocktailgreenImg, title: "Emerald Elixir", category: "Bar" },
+  { url: cocktailredImg, title: "Crimson Sunset", category: "Bar" },
+  { url: kareokepImg, title: "Private Karaoke", category: "Entertainment" },
+  { url: kareoketwoImg, title: "Karaoke Stage", category: "Entertainment" },
+  { url: micstwoImg, title: "Live Duets", category: "Entertainment" },
+  { url: shishaImg, title: "Shisha Lounge", category: "Ambiance" },
+  { url: shotblueImg, title: "Sapphire Shots", category: "Bar" },
+  { url: shotgreenImg, title: "Neon Shots", category: "Bar" },
+  { url: terracevibeImg, title: "Terrace Views", category: "Ambiance" },
+  { url: cig, title: "Cigarette", category: "Bar" },
 ];
-
 
 export default function GalleryPage() {
   const [selectedImg, setSelectedImg] = useState(null);

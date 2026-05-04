@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Beer, Clock, MapPin } from 'lucide-react';
-import tapImg from "../assets/taptap.png";
+import tapImg from "../assets/taptap.jpeg";
 import tapLogo from "../assets/tapbar.png";
 
 const TapBar = () => {
