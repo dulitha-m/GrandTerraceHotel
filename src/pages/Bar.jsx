@@ -50,27 +50,30 @@ This is an out door smoking friendly area"
 
           {/* --- MENUS ADDED HERE --- */}
           <div className="pt-8">
-            <h3 className="text-[#D4A574] text-[10px] uppercase tracking-[0.2em] font-bold mb-4">Download Our Menus</h3>
+            <h3 className="text-[#D4A574] text-[10px] uppercase tracking-[0.2em] font-bold mb-4">View Our Menus</h3>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="/Beer_Menu.pdf" 
-                download 
+                href="/menus/Beer_Menu.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
               >
                 <BeerIcon size={14} /> Beer Menu
               </a>
               
               <a 
-                href="/Bar_Menu.pdf" 
-                download 
+                href="/menus/Bar_Menu.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
               >
                 <Wine size={14} /> Bar Menu
               </a>
               
               <a 
-                href="/Bite_Menu.pdf" 
-                download 
+                href="/menus/Bite_Menu.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
               >
                 <Utensils size={14} /> Bite Menu
