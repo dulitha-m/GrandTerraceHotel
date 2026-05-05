@@ -63,7 +63,7 @@ const Dining = () => {
               >
                 {/* Image Side */}
                 <div className="w-[92%] mx-auto lg:w-[55%] lg:mx-0 relative group">
-                  <div className="absolute -inset-4 border border-[#D4A574]/10 rounded-[40px] translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700"></div>
+                  <div className="absolute inset-0 border border-[#D4A574]/40 rounded-[30px] opacity-0 group-hover:opacity-100 group-hover:-inset-2 transition-all duration-700 pointer-events-none"></div>
                   <div className="relative overflow-hidden rounded-[30px] z-10 shadow-2xl bg-stone-900">
                     <img
                       src={outlet.image}
