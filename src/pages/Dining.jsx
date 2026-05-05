@@ -39,10 +39,10 @@ const Dining = () => {
             Spirits & Socials
           </motion.span>
           <h1 className="text-6xl md:text-9xl font-serif text-white leading-tight">
-            The <span className="italic text-[#D4A574] font-light">Eperience</span>
+            The <span className="italic text-[#D4A574] font-light">Experience</span>
           </h1>
           <p className="text-stone-400 uppercase tracking-[0.4em] text-[10px] mt-6">
-            Fine Spirits • Craft Brews • Shisha • Bites
+            Fine Spirits, Craft Brews, Shisha & Bites
           </p>
           <div className="w-20 h-[1px] bg-[#D4A574] mx-auto mt-8"></div>
         </motion.div>
