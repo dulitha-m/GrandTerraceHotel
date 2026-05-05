@@ -41,8 +41,9 @@ const Bar = () => {
 
           </h2>
           <p className="text-2xl md:text-3xl font-light leading-relaxed opacity-80 italic">
-            "Collection of arrack ,malts ,signature cocktails, shooters, superb Sri Lankan bar bites with live music amazing lighting a live sporting events on giant screens while you party on the grand terrace 
-This is an out door smoking friendly area"
+            "Collection of arrack ,malts ,signature cocktails, shooters, superb Sri Lankan bar bites, live music, amazing lighting, live sporting events on giant screens while you party on the grand terrace"
+            <br></br> 
+            This is an out door smoking friendly area!
           </p>
           
           {/* Time and Location Moved below the logo */}
@@ -91,7 +92,7 @@ This is an out door smoking friendly area"
           className="relative group"
         >
           <div className="absolute -inset-4 border border-[#D4A574]/15 rounded-[40px] transition-all duration-700 group-hover:scale-105"></div>
-          <div className="relative overflow-hidden rounded-[30px] z-10 shadow-3xl bg-stone-900/50 border border-white/5 flex items-center justify-center p-8 md:p-12">
+          <div className="relative overflow-hidden rounded-[30px] z-10 shadow-3xl bg-stone-900/50 border border-white/5 flex items-center justify-center p-8 md:p-0">
             <img 
               src={barPromo} 
               alt="The Grand Terrace Bar" 
@@ -104,7 +105,7 @@ This is an out door smoking friendly area"
           <div className="flex justify-center gap-10 mt-10">
             <div className="flex items-center gap-3">
               <Clock className="text-[#D4A574]" size={18}/>
-              <span className="text-[10px] tracking-widest uppercase font-bold">2pm to midnight</span>
+              <span className="text-[10px] tracking-widest uppercase font-bold">two pm to midnight</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="text-[#D4A574]" size={18}/>
@@ -113,6 +114,21 @@ This is an out door smoking friendly area"
           </div>
         </motion.div>
       </section>
+
+      {/* --- MAP SECTION --- */}
+<section className="py-20 px-6 md:px-20 max-w-7xl mx-auto">
+  <div className="rounded-[40px] overflow-hidden border border-white/5 shadow-2xl h-[450px] w-full">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.1516363330677!2d79.844423869616!3d6.937538030852371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259de0f62c5c9%3A0xa4b9d294087fff70!2sGOVERNOR&#39;S%20BAR!5e0!3m2!1sen!2slk!4v1778011762865!5m2!1sen!2slk" 
+      width="100%"
+      height="100%"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
     </div>
   );
 };

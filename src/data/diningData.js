@@ -22,7 +22,7 @@ export const diningOutlets = [
     name: "KARAOKE SUITE",
     cuisine: "Asian Fusion & Bites",
     description:
-      "Sing your heart out in total privacy. Our Karaoke Suites combine a state-of-the-art sound system with a vibrant menu of Asian street food and signature platters perfect for sharing with the squad.",
+      "Sing your heart out in total privacy. Our Karaoke & Singing Suite combines a state-of-the-art sound system with a vibrant menu of cocktails, shots, Bar Bites and signature platters perfect for sharing with the squad.",
     image: kerImg,
     openingHours: "06:00 PM - 02:00 AM",
     dressCode: "Casual",
@@ -33,7 +33,7 @@ export const diningOutlets = [
     name: "TAP BAR",
     cuisine: "Artisan Beers & Tapas",
     description:
-      "The ultimate destination for craft beer lovers. Enjoy a chilled atmosphere with an extensive range of local and international brews on tap, complemented by spicy, localized tapas.",
+      "The ultimate destination for draft and craft beer lovers. Enjoy a chilled atmosphere with an extensive range of local and international brews on tap, complemented by spicy, localized Bar bites.",
     image: tapImg,
     openingHours: "04:00 PM - 12:00 AM",
     dressCode: "Casual / Trendy",
@@ -44,7 +44,7 @@ export const diningOutlets = [
     name: "ISTANBUL NIGHTS",
     cuisine: "Middle Eastern & Shisha",
     description:
-      "Experience the magic of the Bosphorus in the heart of Colombo. Featuring authentic Turkish mezze, grilled delights, and premium shisha under the stars for a true Mediterranean escape.",
+      "Experience the magic of the Bosphorus in the heart of Colombo. Featuring authentic and premium shisha - hookah, mocktails and fresh juice under the stars for a true Mediterranean escape.",
     image: nigImg,
     openingHours: "06:00 PM - 03:00 AM",
     dressCode: "Evening Wear / Smart Casual",

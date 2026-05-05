@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X, Sparkles, Camera } from 'lucide-react';
 
 // --- ASSETS IMPORT ---
+import govbarImg from '../assets/bar.png';
 import barImg from '../assets/taptap.jpeg';
 import cocktailgreenImg from '../assets/cocktailgreen.jpeg';
 import cocktailredImg from '../assets/cocktailred.jpeg';
@@ -16,8 +17,8 @@ import terracevibeImg from '../assets/terracevibe.jpeg';
 import karaokeImg from '../assets/karaoke.png';
 import nightsImg from '../assets/shi.jpeg';
 import tapImg from '../assets/tt.jpeg';
-import tapbarImg from '../assets/tapbar.png';
-import niImg from '../assets/ni.png';
+import tapbarImg from '../assets/tap-bar.png';
+import niImg from '../assets/nights.jpg';
 import nightImg from '../assets/ka.jpeg';
 import adoImg from '../assets/ado.png';
 import casavaImg from '../assets/casava.png';
@@ -28,33 +29,47 @@ import micImg from '../assets/mic.png';
 import midoriImg from '../assets/midori.png';
 import wadeImg from '../assets/wade.png';
 import cig from '../assets/cig.jpeg';
+import terr from '../assets/ttblank.jpeg';
+import beerImg from '../assets/beer.jpeg';
+import djImg from '../assets/dj.jpeg';
+import shishatwoImg from '../assets/shishatwo.jpeg';
 
 const galleryImages = [
-  { url: barImg, title: "The Grand Bar", category: "Bar" },
-  { url: karaokeImg, title: "Karaoke Lounge", category: "Entertainment" },
-  { url: nightsImg, title: "Heritage Nights", category: "Ambiance" },
-  { url: tapImg, title: "Premium Tap Room", category: "Bar" },
-  { url: tapbarImg, title: "Tap Bar Interior", category: "Bar" },
-  { url: niImg, title: "Signature Cocktails", category: "Bar" },
-  { url: nightImg, title: "Evening Glow", category: "Ambiance" },
-  { url: adoImg, title: "Signature Dish", category: "Dining" },
-  { url: casavaImg, title: "Local Favorites", category: "Dining" },
-  { url: fishImg, title: "Ocean's Bounty", category: "Dining" },
-  { url: issoImg, title: "Fresh Seafood", category: "Dining" },
-  { url: wadeImg, title: "Traditional Bites", category: "Dining" },
-  { url: guitarImg, title: "Live Rhythms", category: "Entertainment" },
-  { url: micImg, title: "Acoustic Evenings", category: "Entertainment" },
-  { url: midoriImg, title: "Premium Spirits", category: "Bar" },
-  { url: cocktailgreenImg, title: "Emerald Elixir", category: "Bar" },
-  { url: cocktailredImg, title: "Crimson Sunset", category: "Bar" },
-  { url: kareokepImg, title: "Private Karaoke", category: "Entertainment" },
-  { url: kareoketwoImg, title: "Karaoke Stage", category: "Entertainment" },
-  { url: micstwoImg, title: "Live Duets", category: "Entertainment" },
-  { url: shishaImg, title: "Shisha Lounge", category: "Ambiance" },
-  { url: shotblueImg, title: "Sapphire Shots", category: "Bar" },
-  { url: shotgreenImg, title: "Neon Shots", category: "Bar" },
-  { url: terracevibeImg, title: "Terrace Views", category: "Ambiance" },
-  { url: cig, title: "Cigarette", category: "Bar" },
+  { url: govbarImg },
+  { url: niImg },
+  { url: tapbarImg },
+  { url: karaokeImg },
+
+  { url: terr },
+  { url: nightsImg },
+  { url: barImg },
+  { url: nightImg },
+
+  { url: tapImg },
+  { url: shishaImg },
+  { url: adoImg },
+  { url: kareokepImg },
+
+  { url: micstwoImg },
+  { url: cig },
+  { url: guitarImg },
+  { url: kareoketwoImg },
+
+  { url: terracevibeImg },
+  {url: shishatwoImg},
+  { url: beerImg },
+  { url: djImg },
+
+  { url: cocktailgreenImg },
+  { url: cocktailredImg },
+  { url: shotblueImg },
+  { url: shotgreenImg },
+
+  { url: issoImg },
+  { url: fishImg },
+  { url: casavaImg },
+  { url: wadeImg },
+
 ];
 
 export default function GalleryPage() {
@@ -97,12 +112,13 @@ export default function GalleryPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-stone-400 font-light italic text-lg max-w-2xl mx-auto mt-6"
           >
-            "Every frame tells a story of heritage, taste, and the vibrant spirit of Grand Terrace."
+            "Every Frame tells a story of Heritage, Taste, and the vibrant Spirit of Grand Terrace."
           </motion.p>
         </header>
 
         {/* --- GALLERY GRID --- */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           <AnimatePresence mode='popLayout'>
             {galleryImages.map((img) => (
               <motion.div

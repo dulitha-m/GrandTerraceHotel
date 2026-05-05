@@ -67,30 +67,15 @@ export default function Contact() {
                 <ContactInfoCard
                   icon={<Mail size={22} />}
                   title="Email Inquiry"
-                  value="infinityresturant@gmail.com"
+                  value="grandterrace07@gmail.com"
                   subValue="Response within 2 hours"
                 />
                 <ContactInfoCard
                   icon={<Clock size={22} />}
                   title="Operating Hours"
-                  value="Daily: 11:00 AM - 11:00 PM"
+                  value="Daily: 2 PM - Midnight"
                   subValue="Open 365 Days"
                 />
-              </div>
-
-              <div className="pt-10 border-t border-white/5">
-                <p className="text-[10px] uppercase tracking-[0.5em] text-[#D4A574] font-bold mb-6 italic text-center lg:text-left">Follow the Legacy</p>
-                <div className="flex justify-center lg:justify-start gap-4">
-                  {[<Instagram />, <Facebook />, <Twitter />].map((icon, i) => (
-                    <motion.a
-                      key={i} href="#"
-                      whileHover={{ scale: 1.1, backgroundColor: '#D4A574', color: '#000' }}
-                      className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white transition-all"
-                    >
-                      {React.cloneElement(icon, { size: 18 })}
-                    </motion.a>
-                  ))}
-                </div>
               </div>
             </div>
 

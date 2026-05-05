@@ -5,6 +5,12 @@ import {
   ArrowUpRight, ChevronUp, Globe, ShieldCheck
 } from 'lucide-react';
 
+// Line 7: Define the Tripadvisor Icon
+const Tripadvisor = ({ size = 24, ...props }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.5 17c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5zm0-1c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm7 1c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5zm0-1c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm1.5-7.5l-3 1.5-3-1.5-2 3.5h10l-2-3.5z" />
+  </svg>
+);
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -55,6 +61,7 @@ const Footer = () => {
               {[
                 { Icon: Instagram, link: "https://www.instagram.com/grand__terrace" },
                 { Icon: Facebook, link: "https://www.facebook.com/people/Grand-Terrace/61571000666292/" },
+                { Icon: Tripadvisor, link: "#" },
               ].map((social, index) => (
                 <a
                   key={index}
@@ -119,10 +126,6 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-
-              <button className="w-full py-4 bg-stone-900 border border-white/10 rounded-xl text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-[#D4A574] hover:text-black transition-all duration-500 flex items-center justify-center gap-2">
-                Request Callback <ArrowUpRight size={14} />
-              </button>
             </div>
           </div>
         </div>

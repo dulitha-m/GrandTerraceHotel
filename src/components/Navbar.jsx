@@ -48,7 +48,7 @@ export default function Navbar() {
             </span>
             <span className="text-[#2a2520]">|</span>
             <span className="font-serif italic text-[13px] text-[#8a7a6a]">
-              Heritage Excellence
+              Heritage & Excellence
             </span>
           </div>
 

@@ -102,7 +102,7 @@ const Dining = () => {
                       <Flame className="text-[#D4A574] shrink-0" size={18} />
                       <div>
                         <span className="block text-[9px] uppercase text-stone-500 tracking-[0.2em] font-bold mb-1">Timing</span>
-                        <span className="text-[13px] text-stone-200">2pm to midnight</span>
+                        <span className="text-[13px] text-stone-200">2PM to midnight</span>
                       </div>
                     </div>
                   </div>
@@ -166,7 +166,7 @@ const Dining = () => {
             The <span className="italic text-[#D4A574]">Night</span> is Young
           </h2>
           <p className="text-stone-400 text-lg md:text-xl font-light mb-12 italic">
-            "Sip, socialize, and savor the finest moments in Colombo."
+            "Sip, socialize, and savor the finest moments in Colombo"
           </p>
           <div className="flex justify-center">
             <div className="w-20 h-[1px] bg-[#D4A574]/30"></div>

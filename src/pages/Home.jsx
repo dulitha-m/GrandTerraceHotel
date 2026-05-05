@@ -11,7 +11,7 @@ const outlets = [
   { id: "01", title: "Governor's Bar", subtitle: "FINE SPIRITS", img: baImg, path: "/bar" },
   { id: "02", title: "Istanbul Nights", subtitle: "Shisha Lounge", img: nigImg, path: "/shisha" },
   { id: "03", title: "Tap Bar", subtitle: "CRAFT BREWS", img: tapImg, path: "/tap-bar" },
-  { id: "04", title: "Governor's Mic Karaoke", subtitle: "EXCLUSIVE DINING", img: kerImg, path: "/karaoke" },
+  { id: "04", title: "Governor's Mic Karaoke", subtitle: "YOUR EXCLUSIVE Singing Suite", img: kerImg, path: "/karaoke" },
 ];
 
 const Home = () => {
@@ -98,8 +98,8 @@ const Home = () => {
           {outlets.map((item) => (
             <section key={item.id} className="h-[65vh] md:h-[75vh] flex-shrink-0">
               <div className="h-full aspect-[9/14] md:aspect-[9/15] relative overflow-hidden rounded-[40px] md:rounded-[60px] border border-white/5 shadow-2xl group">
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/0 to-transparent"></div>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
                   <p className="text-[#D4A574] text-[10px] tracking-[0.5em] uppercase mb-4 font-bold">{item.subtitle}</p>
                   <h3 className="text-white text-3xl md:text-5xl font-serif mb-8">{item.title}</h3>

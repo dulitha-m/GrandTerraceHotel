@@ -2,18 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Music, Clock, MapPin } from 'lucide-react';
-import kerImg from "../assets/ka.jpeg";
+import kerImg from "../assets/ka.png";
 import karaokeLogo from "../assets/karaoke.png";
 
 const Karaoke = () => {
   return (
     <div className="bg-[#0c0a09] min-h-screen text-[#E6D5C3] font-serif">
-      <section className="relative h-[65vh] flex items-end pb-16 px-6 md:px-20 overflow-hidden">
+      <section className="relative h-[90vh] flex items-end pb-16 px-6 md:px-20 overflow-hidden">
         <motion.img initial={{ scale: 1.2, opacity: 0 }} animate={{ scale: 1, opacity: 0.4 }} transition={{ duration: 1.5 }} src={kerImg} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] to-transparent"></div>
         <div className="relative z-10 w-full max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-2 text-[#D4A574] text-[10px] uppercase tracking-widest mb-8 font-bold"><ArrowLeft size={16} /> Back</Link>
-          <h1 className="text-6xl md:text-9xl uppercase tracking-tight">Governor's Mic Karaoke</h1>
+          <h1 className="text-6xl md:text-9xl uppercase tracking-tight">Governor's Mic Karaoke <br></br>(Singing Suite)</h1>
         </div>
       </section>
 
@@ -43,6 +43,21 @@ const Karaoke = () => {
           </div>
         </motion.div>
       </section>
+
+      {/* --- MAP SECTION --- */}
+<section className="py-20 px-6 md:px-20 max-w-7xl mx-auto">
+  <div className="rounded-[40px] overflow-hidden border border-white/5 shadow-2xl h-[450px] w-full">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.603016886486!2d79.84265747581792!3d6.937957518206606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25926dd07a537%3A0x719eae312e6f8529!2sGrand%20Oriental%20Hotel%20-%20Tap%20Bar!5e0!3m2!1sen!2slk!4v1778012114416!5m2!1sen!2slk"
+      width="100%"
+      height="100%"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
     </div>
   );
 };

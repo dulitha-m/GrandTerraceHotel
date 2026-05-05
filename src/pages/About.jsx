@@ -17,35 +17,18 @@ export default function About() {
           transition={{ duration: 1.2 }}
           className="relative z-10 max-w-5xl mx-auto text-center"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-3 uppercase text-[10px] text-[#D4A574] font-black mb-8 border border-[#D4A574]/20 px-6 py-2 rounded-full tracking-[0.4em]"
-          >
-            <History size={12} /> Since 2010
-          </motion.div>
-
           <h1 className="text-6xl md:text-9xl font-serif text-white mb-8 leading-[0.9]">
             The Spirit of <br />
             <span className="italic text-[#D4A574] font-light">Heritage</span>
           </h1>
           <p className="text-xl md:text-2xl text-stone-400 font-light italic leading-relaxed max-w-3xl mx-auto">
-            "A sanctuary where Colombo's colonial charm meets the pinnacle of global gastronomy."
+            "A sanctuary where Colombo's Colonial Charm Meets The Pinnacle of Global Gastronomy, Mixology & Entertainment"
           </p>
         </motion.div>
       </section>
 
       {/* --- STATS SECTION --- */}
-      <section className="bg-stone-900/30 border-y border-white/5 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-            <StatItem icon={<ChefHat />} value="08" label="Master Culinarians" />
-            <StatItem icon={<Globe />} value="04" label="Global Concepts" />
-            <StatItem icon={<Users />} value="25K+" label="Distinguished Guests" />
-          </div>
-        </div>
-      </section>
+      
 
       {/* --- OUR STORY --- */}
       <section className="py-40 px-6">
@@ -67,7 +50,7 @@ export default function About() {
 
                 {/* ✅ NEW CONTENT ADDED HERE */}
                 <p>
-                  Grand Terrace is a vibrant nightlife destination offering a premium mix of foreign and local liquor, flavorful bar bites, and a relaxed shisha experience. Designed for unforgettable nights, we bring together great drinks, music, and entertainment, including lively karaoke sessions. Whether you're here to unwind or celebrate, Grand Terrace delivers the perfect blend of energy, taste, and atmosphere.
+                  Grand Terrace is a vibrant nightlife destination offering a premium mix of foreign and local liquor, flavorful bar bites, and a relaxed shisha - hookah experience. Designed for unforgettable nights, we bring together great drinks, music, and entertainment, including lively karaoke sessions. Whether you're here to unwind or celebrate, Grand Terrace delivers the perfect blend of energy, taste, and atmosphere.
                 </p>
 
                 <p>
@@ -76,7 +59,7 @@ export default function About() {
                 </p>
 
                 <p className="text-[#D4A574] font-serif italic text-2xl">
-                  "It is not just a night; it is an experience to remember."
+                  "It is not just a night; it is an experience to remember"
                 </p>
               </div>
             </motion.div>
