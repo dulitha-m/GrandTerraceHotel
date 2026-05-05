@@ -33,7 +33,7 @@ const Dining = () => {
           >
             Spirits & Socials
           </motion.span>
-          <h1 className="text-4xl md:text-9xl font-serif text-white leading-tight">
+          <h1 className="text-6xl md:text-9xl font-serif text-white leading-tight">
             The <span className="italic text-[#D4A574] font-light">Experience</span>
           </h1>
           <p className="text-stone-400 uppercase tracking-[0.4em] text-[10px] mt-6">
@@ -62,7 +62,7 @@ const Dining = () => {
                 className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center`}
               >
                 {/* Image Side */}
-                <div className="w-full lg:w-[55%] relative group">
+                <div className="w-[92%] mx-auto lg:w-[55%] lg:mx-0 relative group">
                   <div className="absolute -inset-4 border border-[#D4A574]/10 rounded-[40px] translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700"></div>
                   <div className="relative overflow-hidden rounded-[30px] z-10 shadow-2xl bg-stone-900">
                     <img
@@ -71,7 +71,7 @@ const Dining = () => {
                       className="w-full h-[550px] object-cover transition-transform duration-[2s] group-hover:scale-105 opacity-80"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-transparent to-transparent opacity-60"></div>
-                    <div className="absolute bottom-8 left-8 bg-[#D4A574] text-black px-6 py-2 text-[10px] uppercase tracking-[0.2em] font-black rounded-full">
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 lg:left-8 lg:translate-x-0 bg-[#D4A574] text-black px-6 py-2 text-[10px] uppercase tracking-[0.2em] font-black rounded-full whitespace-nowrap">
                       {outlet.cuisine}
                     </div>
                   </div>

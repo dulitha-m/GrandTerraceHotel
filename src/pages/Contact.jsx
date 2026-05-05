@@ -29,7 +29,7 @@ export default function Contact() {
           >
             <br></br>
             <span className="text-[#D4A574] text-[10px] tracking-[0.6em] uppercase font-black mb-6 block">✦ Connect With Excellence ✦</span>
-            <h1 className="text-4xl md:text-8xl font-serif text-[#E6D5C3] mb-8 leading-tight">
+            <h1 className="text-6xl md:text-8xl font-serif text-[#E6D5C3] mb-8 leading-tight">
               Get <span className="italic font-light lowercase text-[#D4A574]">in</span> Touch
             </h1>
             <p className="max-w-2xl mx-auto text-stone-400 text-lg font-light leading-relaxed">
