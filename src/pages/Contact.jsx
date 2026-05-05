@@ -29,7 +29,7 @@ export default function Contact() {
           >
             <br></br>
             <span className="text-[#D4A574] text-[10px] tracking-[0.6em] uppercase font-black mb-6 block">✦ Connect With Excellence ✦</span>
-            <h1 className="text-6xl md:text-8xl font-serif text-[#E6D5C3] mb-8 leading-tight">
+            <h1 className="text-4xl md:text-8xl font-serif text-[#E6D5C3] mb-8 leading-tight">
               Get <span className="italic font-light lowercase text-[#D4A574]">in</span> Touch
             </h1>
             <p className="max-w-2xl mx-auto text-stone-400 text-lg font-light leading-relaxed">
@@ -45,7 +45,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-12 gap-16">
 
             {/* LEFT SIDE: INFO */}
-            <div className="lg:col-span-5 space-y-10">
+            <div className="lg:col-span-5 space-y-10 text-center lg:text-left">
               <div>
                 <h2 className="text-3xl font-serif text-white mb-6">Concierge <span className="text-[#D4A574]">Services</span></h2>
                 <p className="text-stone-500 leading-relaxed mb-8 text-sm uppercase tracking-widest">Available 24/7 for our distinguished guests</p>
@@ -187,7 +187,7 @@ function ContactInfoCard({ icon, title, value, subValue }) {
   return (
     <motion.div
       whileHover={{ x: 10 }}
-      className="flex items-center gap-6 p-6 rounded-3xl bg-white/5 border border-white/5 hover:border-[#D4A574]/30 transition-all"
+      className="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-3xl bg-white/5 border border-white/5 hover:border-[#D4A574]/30 transition-all"
     >
       <div className="w-14 h-14 rounded-2xl bg-[#D4A574]/10 flex items-center justify-center text-[#D4A574]">
         {icon}

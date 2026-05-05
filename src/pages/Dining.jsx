@@ -33,7 +33,7 @@ const Dining = () => {
           >
             Spirits & Socials
           </motion.span>
-          <h1 className="text-6xl md:text-9xl font-serif text-white leading-tight">
+          <h1 className="text-4xl md:text-9xl font-serif text-white leading-tight">
             The <span className="italic text-[#D4A574] font-light">Experience</span>
           </h1>
           <p className="text-stone-400 uppercase tracking-[0.4em] text-[10px] mt-6">
@@ -78,7 +78,7 @@ const Dining = () => {
                 </div>
 
                 {/* Content Side */}
-                <div className="w-full lg:w-[45%] space-y-10 lg:px-12">
+                <div className="w-full lg:w-[45%] space-y-10 lg:px-12 text-center lg:text-left">
                   <div className="space-y-4">
                     <span className="text-[#D4A574] text-[10px] tracking-[0.4em] uppercase font-bold">Outlet {outlet.id}</span>
                     <h3 className="text-5xl md:text-7xl font-serif text-white tracking-tight leading-none">{outlet.name}</h3>
@@ -103,7 +103,7 @@ const Dining = () => {
                   </div>
 
                   {/* Buttons Section */}
-                  <div className="flex flex-wrap gap-4 pt-4">
+                  <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
                     {isGovernorsBar ? (
                       <>
                         <a
