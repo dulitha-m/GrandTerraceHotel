@@ -147,9 +147,6 @@ export default function Navbar() {
               ))}
             </nav>
             <div className="mt-auto flex flex-col gap-6">
-              <button className="w-full bg-[#D4A574] text-black py-5 font-sans font-black uppercase tracking-[0.2em] text-[13px]">
-                Book Your Stay
-              </button>
               <div className="flex items-center justify-center gap-3 py-4 border-t border-[#D4A574]/10">
                 <Phone size={14} className="text-[#D4A574]" />
                 <p className="text-[11px] tracking-[0.2em] text-[#8a7a6a] uppercase font-bold">
