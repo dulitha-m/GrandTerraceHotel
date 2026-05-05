@@ -33,12 +33,16 @@ import terr from '../assets/ttblank.jpeg';
 import beerImg from '../assets/beer.jpeg';
 import djImg from '../assets/dj.jpeg';
 import shishatwoImg from '../assets/shishatwo.jpeg';
+import bar1Img from '../assets/bar1.png';
+import karaoke1Img from '../assets/karaoke1.jpg';
+import tapbar1Img from '../assets/tapbar1.jpg';
+
 
 const galleryImages = [
-  { url: govbarImg },
+  { url: bar1Img },
   { url: niImg },
-  { url: tapbarImg },
-  { url: karaokeImg },
+  { url: tapbar1Img },
+  { url: karaoke1Img },
 
   { url: terr },
   { url: nightsImg },
@@ -129,7 +133,7 @@ export default function GalleryPage() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.6 }}
                 onClick={() => setSelectedImg(img)}
-                className="relative group cursor-pointer overflow-hidden rounded-xl border border-white/5 bg-stone-900/40 break-inside-avoid"
+                className="relative aspect-square flex items-center justify-center group cursor-pointer overflow-hidden rounded-xl bg-white shadow-lg"
               >
                 <div className="overflow-hidden">
                   <motion.img
@@ -143,14 +147,6 @@ export default function GalleryPage() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
                   <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Sparkles size={12} className="text-[#D4A574]" />
-                      <span className="text-[10px] text-[#D4A574] uppercase tracking-[0.3em] font-bold">{img.category}</span>
-                    </div>
-                    <h3 className="text-2xl font-serif text-white tracking-wide">{img.title}</h3>
-                    <div className="mt-4 flex items-center gap-2 text-[9px] text-stone-400 uppercase tracking-widest border-b border-white/10 w-fit pb-1">
-                      View Space <ArrowUpRight size={14} />
-                    </div>
                   </div>
                 </div>
               </motion.div>
