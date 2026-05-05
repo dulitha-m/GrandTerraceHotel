@@ -16,11 +16,6 @@ const Dining = () => {
       {/* --- HERO SECTION --- */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1572116469696-31de0f17cc3b?auto=format&fit=crop&q=80&w=2000"
-            className="w-full h-full object-cover scale-110 opacity-60"
-            alt="Bar Hero"
-          />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0c0a09]/90 via-transparent to-[#0c0a09]"></div>
         </div>
 
@@ -39,10 +34,10 @@ const Dining = () => {
             Spirits & Socials
           </motion.span>
           <h1 className="text-6xl md:text-9xl font-serif text-white leading-tight">
-            The <span className="italic font-light">Experience</span>
+            The <span className="italic text-[#D4A574] font-light">Experience</span>
           </h1>
           <p className="text-stone-400 uppercase tracking-[0.4em] text-[10px] mt-6">
-            Fine Spirits, Craft Brews, Shisha & Bites
+            Fine Spirits • Craft Brews • Shisha • Bites
           </p>
           <div className="w-20 h-[1px] bg-[#D4A574] mx-auto mt-8"></div>
         </motion.div>
