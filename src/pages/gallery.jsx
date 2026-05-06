@@ -80,7 +80,7 @@ export default function GalleryPage() {
   const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <div className="bg-[#0c0a09] min-h-screen pt-40 pb-24 selection:bg-[#D4A574] selection:text-black overflow-hidden">
+    <div className="bg-[#0c0a09] min-h-screen pt-40 pb-24 selection:bg-[#D4A574] selection:text-black overflow-x-hidden">
 
       {/* Ambient Glows */}
       <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-[#D4A574]/5 blur-[150px] rounded-full -z-0"></div>

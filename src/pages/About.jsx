@@ -7,7 +7,7 @@ import karaokeLogo from '../assets/karaoke1.jpg';
 
 export default function About() {
   return (
-    <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black">
+    <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black overflow-x-hidden">
 
       {/* --- HERO SECTION: THE LEGACY --- */}
       <section className="relative py-32 px-6 overflow-hidden">

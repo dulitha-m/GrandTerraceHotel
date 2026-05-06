@@ -12,7 +12,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0c0a09] selection:bg-[#D4A574] selection:text-black">
+    <div className="min-h-screen bg-[#0c0a09] selection:bg-[#D4A574] selection:text-black overflow-x-hidden">
 
       {/* --- HERO SECTION --- */}
       <section className="relative pt-48 pb-24 overflow-hidden border-b border-white/5">

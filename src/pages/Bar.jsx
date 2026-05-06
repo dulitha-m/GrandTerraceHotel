@@ -8,7 +8,7 @@ import barPromo from "../assets/bar.png";
 const Bar = () => {
   return (
     // font-serif eka ehemama thibbada
-    <div className="bg-[#0c0a09] min-h-screen text-[#E6D5C3] font-serif selection:bg-[#D4A574]">
+    <div className="bg-[#0c0a09] min-h-screen text-[#E6D5C3] font-serif selection:bg-[#D4A574] overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-[65vh] flex items-end pb-16 px-6 md:px-20 overflow-hidden">
         <motion.img 

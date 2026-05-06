@@ -7,7 +7,7 @@ import karaokeLogo from "../assets/karaoke.png";
 
 const Karaoke = () => {
   return (
-    <div className="bg-[#0c0a09] min-h-screen text-[#E6D5C3] font-serif">
+    <div className="bg-[#0c0a09] min-h-screen text-[#E6D5C3] font-serif overflow-x-hidden">
       <section className="relative h-[90vh] flex items-end pb-16 px-6 md:px-20 overflow-hidden">
         <motion.img initial={{ scale: 1.2, opacity: 0 }} animate={{ scale: 1, opacity: 0.4 }} transition={{ duration: 1.5 }} src={kerImg} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] to-transparent"></div>

@@ -11,7 +11,7 @@ const istanbulMenu = "/menus/Istanbul_Nights_Menu.pdf";
 
 const Dining = () => {
   return (
-    <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black">
+    <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black overflow-x-hidden">
 
       {/* --- HERO SECTION --- */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
