@@ -81,7 +81,7 @@ const Shisha = () => {
           </div>
 
           {/* Info Badges */}
-          <div className="flex justify-center gap-10 mt-10">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 mt-10">
             <div className="flex items-center gap-3">
               <Clock className="text-[#D4A574]" size={18} />
               <span className="text-[10px] tracking-widest uppercase font-bold">TWO pm to midnight</span>

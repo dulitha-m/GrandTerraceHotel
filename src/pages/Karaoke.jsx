@@ -42,7 +42,7 @@ const Karaoke = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
           </div>
            {/* Info Badges */}
-          <div className="flex justify-center gap-10 mt-10">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 mt-10">
             <div className="flex items-center gap-3">
               <Clock className="text-[#D4A574]" size={18}/>
               <div className="flex flex-col">

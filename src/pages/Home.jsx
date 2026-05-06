@@ -101,7 +101,7 @@ const Home = () => {
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover opacity-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/0 to-transparent"></div>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
-                  <p className={`text-[12px] tracking-[0.5em] uppercase mb-4 font-bold ${item.subtitle === 'CRAFT BREWS' ? 'text-[#D4A574]' : 'text-[#D4A574]'
+                  <p className={`text-[10px] md:text-[12px] tracking-[0.5em] uppercase mb-4 font-bold ${item.subtitle === 'CRAFT BREWS' ? 'text-[#D4A574]' : 'text-[#D4A574]'
                     }`}>
                     {item.subtitle}
                   </p>

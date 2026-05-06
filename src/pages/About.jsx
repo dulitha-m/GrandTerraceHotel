@@ -89,19 +89,19 @@ export default function About() {
                     ))}
                   </div>
                 </div>
-                <div className="flex justify-center items-center gap-12 pt-12 mt-12 border-t border-white/5">
-                    <div className="w-36 h-36 flex items-center justify-center bg-white/[0.03] rounded-3xl border border-white/5 group/logo hover:border-[#D4A574]/30 transition-all duration-500">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 pt-10 mt-10 border-t border-white/5">
+                    <div className="w-28 h-28 md:w-36 md:h-36 flex items-center justify-center bg-white/[0.03] rounded-3xl border border-white/5 group/logo hover:border-[#D4A574]/30 transition-all duration-500">
                       <img 
                           src={barLogo} 
                           alt="Bar Logo" 
-                          className="w-28 h-28 object-contain grayscale opacity-60 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 transition-all duration-700"
+                          className="w-20 h-20 md:w-28 md:h-28 object-contain grayscale opacity-60 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 transition-all duration-700"
                       />
                     </div>
-                    <div className="w-36 h-36 flex items-center justify-center bg-white/[0.03] rounded-3xl border border-white/5 group/logo hover:border-[#D4A574]/30 transition-all duration-500">
+                    <div className="w-28 h-28 md:w-36 md:h-36 flex items-center justify-center bg-white/[0.03] rounded-3xl border border-white/5 group/logo hover:border-[#D4A574]/30 transition-all duration-500">
                       <img 
                           src={karaokeLogo} 
                           alt="Karaoke Logo" 
-                          className="w-28 h-28 object-contain grayscale opacity-60 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 transition-all duration-700"
+                          className="w-20 h-20 md:w-28 md:h-28 object-contain grayscale opacity-60 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 transition-all duration-700"
                       />
                     </div>
                 </div> 
