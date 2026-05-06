@@ -6,11 +6,6 @@ import {
 } from 'lucide-react';
 
 // Line 7: Define the Tripadvisor Icon
-const Tripadvisor = ({ size = 24, ...props }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.5 17c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5zm0-1c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm7 1c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5zm0-1c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm1.5-7.5l-3 1.5-3-1.5-2 3.5h10l-2-3.5z" />
-  </svg>
-);
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -61,15 +56,21 @@ const Footer = () => {
               {[
                 { Icon: Instagram, link: "https://www.instagram.com/grand__terrace" },
                 { Icon: Facebook, link: "https://www.facebook.com/people/Grand-Terrace/61571000666292/" },
-                { Icon: Tripadvisor, link: "#" },
+                { name: "Trip Advisor", link: "#" },
               ].map((social, index) => (
                 <a
                   key={index}
                   href={social.link}
-                  className="group relative w-12 h-12 flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50"
+                  className={`group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 ${social.name ? 'px-8 h-12' : 'w-12 h-12'}`}
                 >
                   <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                  <social.Icon size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+                  {social.Icon ? (
+                    <social.Icon size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+                  ) : (
+                    <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.2em] text-white group-hover:text-black transition-colors duration-500 whitespace-nowrap">
+                      {social.name}
+                    </span>
+                  )}
                 </a>
               ))}
             </div>
@@ -101,6 +102,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+          
 
           {/* Exclusive Contact Card */}
           <div className="lg:col-span-3">
@@ -125,10 +127,18 @@ const Footer = () => {
                     </p>
                   </div>
                 </div>
+                <a href="mailto:info@grandterrace.life" className="flex items-start gap-4 group/item">
+                  <Mail size={18} className="text-[#D4A574] mt-1" />
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-stone-500 mb-1">Email</p>
+                    <p className="text-sm text-white font-medium leading-relaxed">info@grandterrace.life</p>
+                  </div>
+                </a>
               </div>
             </div>
-          </div>
+          </div>         
         </div>
+        
 
         {/* --- BOTTOM COMPLIANCE BAR --- */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
@@ -165,6 +175,7 @@ const Footer = () => {
               </span>
             </div>
           </div>
+          
 
         </div>
       </div>

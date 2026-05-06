@@ -48,7 +48,7 @@ export default function Contact() {
             <div className="lg:col-span-5 space-y-10 text-center lg:text-left">
               <div>
                 <h2 className="text-3xl font-serif text-white mb-6">Concierge <span className="text-[#D4A574]">Services</span></h2>
-                <p className="text-stone-500 leading-relaxed mb-8 text-sm uppercase tracking-widest">Available 24/7 for our distinguished guests</p>
+                <p className="text-stone-500 leading-relaxed mb-8 text-sm uppercase tracking-widest">Available On All Open Hours Of Day</p>
               </div>
 
               <div className="space-y-4">
@@ -67,14 +67,14 @@ export default function Contact() {
                 <ContactInfoCard
                   icon={<Mail size={22} />}
                   title="Email Inquiry"
-                  value="grandterrace07@gmail.com"
+                  value="info@grandterrace.life"
                   subValue="Response within 2 hours"
                 />
                 <ContactInfoCard
                   icon={<Clock size={22} />}
                   title="Operating Hours"
                   value="Daily: 2 PM - Midnight"
-                  subValue="Open 365 Days"
+                  subValue="Open 365 Days (Exept Governmant Excise Holidays)"
                 />
               </div>
             </div>

@@ -26,7 +26,7 @@ const Bar = () => {
           <motion.h1 
             initial={{ y: 30, opacity: 0 }} 
             animate={{ y: 0, opacity: 1 }} 
-            className="text-6xl md:text-9xl uppercase tracking-tight"
+            className="text-6xl md:text-8xl uppercase tracking-tight"
           >
             Governor's Bar
           </motion.h1>
@@ -41,9 +41,9 @@ const Bar = () => {
 
           </h2>
           <p className="text-2xl md:text-3xl font-light leading-relaxed opacity-80 italic">
-            "Collection of arrack ,malts ,signature cocktails, shooters, superb Sri Lankan bar bites, live music, amazing lighting, live sporting events on giant screens while you party on the grand terrace"
+            "Collection of Arrack, Malts, Signature Cocktails, Shooters, Superb Sri Lankan Bar Bites, Live Music, Dj Music, Amazing Lighting, Live Sporting Events on Giant Screens while You Party on the Grand Terrace"
             <br></br> 
-            This is an out door smoking friendly area!
+            This is an Out door Smoking Friendly area !
           </p>
           
           {/* Time and Location Moved below the logo */}

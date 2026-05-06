@@ -9,7 +9,7 @@ import nigImg from "../assets/shi.jpeg";
 
 const outlets = [
   { id: "01", title: "Governor's Bar", subtitle: "FINE SPIRITS", img: baImg, path: "/bar" },
-  { id: "02", title: "Istanbul Nights", subtitle: "Shisha Lounge", img: nigImg, path: "/shisha" },
+  { id: "02", title: "Istanbul Nights", subtitle: "Shisha - Hookah Terrace", img: nigImg, path: "/shisha" },
   { id: "03", title: "Tap Bar", subtitle: "CRAFT BREWS", img: tapImg, path: "/tap-bar" },
   { id: "04", title: "Governor's Mic Karaoke", subtitle: "YOUR EXCLUSIVE Singing Suite", img: kerImg, path: "/karaoke" },
 ];
@@ -101,7 +101,10 @@ const Home = () => {
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover opacity-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/0 to-transparent"></div>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
-                  <p className="text-[#D4A574] text-[10px] tracking-[0.5em] uppercase mb-4 font-bold">{item.subtitle}</p>
+                  <p className={`text-[12px] tracking-[0.5em] uppercase mb-4 font-bold ${item.subtitle === 'CRAFT BREWS' ? 'text-[#D4A574]' : 'text-[#D4A574]'
+                    }`}>
+                    {item.subtitle}
+                  </p>
                   <h3 className="text-white text-3xl md:text-5xl font-serif mb-8">{item.title}</h3>
                   <Link to={item.path}>
                     <button className="text-[10px] text-white border border-white/40 px-10 py-3 rounded-full uppercase tracking-[0.2em] font-bold active:scale-95 transition-all">
