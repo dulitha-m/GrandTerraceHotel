@@ -62,7 +62,7 @@ const Karaoke = () => {
 <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto">
   <div className="rounded-[40px] overflow-hidden border border-white/5 shadow-2xl h-[450px] w-full">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.603016886486!2d79.84265747581792!3d6.937957518206606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25926dd07a537%3A0x719eae312e6f8529!2sGrand%20Oriental%20Hotel%20-%20Tap%20Bar!5e0!3m2!1sen!2slk!4v1778012114416!5m2!1sen!2slk"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.6065117942817!2d79.84249267581792!3d6.937542018211763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259de0f62c5c9%3A0xa4b9d294087fff70!2sGOVERNOR&#39;S%20MIC%20KARAOKE!5e0!3m2!1sen!2slk!4v1779396967609!5m2!1sen!2slk"
       width="100%"
       height="100%"
       allowFullScreen=""
