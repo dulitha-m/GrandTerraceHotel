@@ -56,7 +56,6 @@ const Footer = () => {
               {[
                 { Icon: Instagram, link: "https://www.instagram.com/grand__terrace" },
                 { Icon: Facebook, link: "https://www.facebook.com/people/Grand-Terrace/61571000666292/" },
-                { name: "Trip Advisor", link: "#" },
               ].map((social, index) => (
                 <a
                   key={index}

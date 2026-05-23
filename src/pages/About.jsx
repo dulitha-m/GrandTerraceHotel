@@ -2,8 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Award, Users, Heart, Star, Clock, MapPin, Phone, Mail, Utensils, Wine, ChefHat, Sparkles, History, Globe } from "lucide-react";
 import logo from "../assets/hotel.png";
-import barLogo from '../assets/bar1.png';
-import karaokeLogo from '../assets/karaoke1.jpg';
 
 export default function About() {
   return (
@@ -89,22 +87,34 @@ export default function About() {
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 pt-10 mt-10 border-t border-white/5">
-                    <div className="w-28 h-28 md:w-36 md:h-36 flex items-center justify-center bg-white/[0.03] rounded-3xl border border-white/5 group/logo hover:border-[#D4A574]/30 transition-all duration-500">
-                      <img 
-                          src={barLogo} 
-                          alt="Bar Logo" 
-                          className="w-20 h-20 md:w-28 md:h-28 object-contain grayscale opacity-60 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 transition-all duration-700"
-                      />
-                    </div>
-                    <div className="w-28 h-28 md:w-36 md:h-36 flex items-center justify-center bg-white/[0.03] rounded-3xl border border-white/5 group/logo hover:border-[#D4A574]/30 transition-all duration-500">
-                      <img 
-                          src={karaokeLogo} 
-                          alt="Karaoke Logo" 
-                          className="w-20 h-20 md:w-28 md:h-28 object-contain grayscale opacity-60 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 transition-all duration-700"
-                      />
-                    </div>
-                </div> 
+                <div className="flex flex-col md:flex-row justify-center items-center gap-6 pt-10 mt-10 border-t border-white/5">
+                  {/* First TripAdvisor Link */}
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 px-8 h-12"
+                  >
+                    <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500"></div>
+                    <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.2em] text-white group-hover/btn:text-black transition-colors duration-500 whitespace-nowrap">
+                      Trip Advisor - Bar
+                    </span>
+                  </a>
+
+                  {/* Second TripAdvisor Link */}
+                  <a
+                    href="https://www.tripadvisor.com/Attraction_Review-g293962-d34391468-Reviews-Governor_s_Mic_Karaoke-Colombo_Western_Province.html" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 px-8 h-12"
+                  >
+                    <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500"></div>
+                    <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.2em] text-white group-hover/btn:text-black transition-colors duration-500 whitespace-nowrap">
+                      Trip Advisor - Karaoke
+                    </span>
+                  </a>
+                </div>
+
               </div>
             </motion.div>
           </div>

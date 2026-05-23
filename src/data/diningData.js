@@ -7,6 +7,18 @@ import nigImg from "../assets/shi.jpeg";
 
 export const diningOutlets = [
   {
+    id: 3,
+    name: "TAP BAR",
+    cuisine: "Craft - Draft - Tap Beers - Ciders",
+    description:
+      "The ultimate destination for draft and craft beer lovers with a great selection of ciders. Enjoy a chilled atmosphere with an extensive range of local and international brews on tap, complemented by spicy, localized Bar bites.",
+    image: tapImg,
+    openingHours: "02:00 PM - Midnight,\n2:00 PM - 8:00 PM",
+    status: "Monday to Wednesday,\nThursday to Sunday",
+    dressCode: "Casual / Trendy",
+    menuLink: "/menus/Beer_Menu.pdf",
+  },
+  {
     id: 1,
     name: "GOVERNOR'S BAR",
     cuisine: "Colonial - Contemporary - Great Spirits",
@@ -29,18 +41,6 @@ export const diningOutlets = [
     status: "Open Daily",
     dressCode: "Evening Wear / Smart Casual",
     menuLink: "/menus/Istanbul_Nights_Menu.pdf",
-  },
-  {
-    id: 3,
-    name: "TAP BAR",
-    cuisine: "Craft - Draft - Tap Beers - Ciders",
-    description:
-      "The ultimate destination for draft and craft beer lovers with a great selection of ciders. Enjoy a chilled atmosphere with an extensive range of local and international brews on tap, complemented by spicy, localized Bar bites.",
-    image: tapImg,
-    openingHours: "02:00 PM - Midnight,\n2:00 PM - 8:00 PM",
-    status: "Monday to Wednesday,\nThursday to Sunday",
-    dressCode: "Casual / Trendy",
-    menuLink: "/menus/Beer_Menu.pdf",
   },
   {
     id: 2,

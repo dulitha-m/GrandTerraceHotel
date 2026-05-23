@@ -15,7 +15,7 @@ export default function Contact() {
     <div className="min-h-screen bg-[#0c0a09] selection:bg-[#D4A574] selection:text-black overflow-x-hidden">
 
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-48 pb-24 overflow-hidden border-b border-white/5">
+      <section className="relative pt-56 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#D4A574]/10 blur-[120px] rounded-full animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#8B6239]/10 blur-[120px] rounded-full animate-pulse" />

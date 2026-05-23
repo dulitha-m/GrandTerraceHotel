@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown, Globe, Phone } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import MainLogo from "../assets/logoo.png";
+import tapBarLogo from "../assets/tap-bar.png";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
@@ -63,18 +64,23 @@ export default function Navbar() {
 
       {/* ── MAIN NAV ── */}
       <div className="hidden lg:block bg-[#0c0a08]/95 backdrop-blur-sm border-b border-[#D4A574]/10 relative">
-        <div className="max-w-[1600px] mx-auto px-8 flex flex-col items-center pt-10 pb-6">
+        <div className="max-w-[1600px] mx-auto px-8 flex flex-col items-center pt-0 pb-6">
           <div className="relative h-10 w-full flex justify-center items-center">
-            <Link to="/" className="absolute left-1/2 -translate-x-1/2 top-[-22px] z-[1001] group">
+            <Link to="/" className="absolute left-1/2 -translate-x-1/2 top-[-52px] z-[1001] group flex items-center gap-4">
               <img
                 src={MainLogo}
                 alt="Grand Terrace Logo"
                 className="w-64 h-auto object-contain brightness-125 transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_8px_30px_rgba(0,0,0,0.9)]"
               />
+              <img
+                src={tapBarLogo}
+                alt="Tap Bar Logo"
+                className="w-64 h-auto object-contain brightness-150 drop-shadow-[0_0_20px_rgba(212,165,116,0.3)] transition-transform duration-500 group-hover:scale-105"
+              />
             </Link>
           </div>
 
-          <nav className="flex items-center gap-4 mt-12">
+          <nav className="flex items-center gap-4 mt-24 relative z-[1002]">
             {NAV_LINKS.map((link, idx) => (
               <React.Fragment key={link.to}>
                 <NavLink
@@ -115,8 +121,9 @@ export default function Navbar() {
         <button onClick={() => setOpen(!open)} className="text-[#D4A574]">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <Link to="/" className="absolute left-1/2 -translate-x-1/2">
+        <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
           <img src={MainLogo} alt="Logo" className="h-10 w-auto brightness-110" />
+          <img src={tapBarLogo} alt="Tap Bar Logo" className="h-10 w-auto object-contain brightness-150 drop-shadow-[0_0_15px_rgba(212,165,116,0.3)]" />
         </Link>
         {/* Spacer to keep flex layout balanced */}
         <div className="w-14" />
