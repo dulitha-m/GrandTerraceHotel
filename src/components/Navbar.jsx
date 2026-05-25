@@ -117,16 +117,16 @@ export default function Navbar() {
       </div>
 
       {/* ── MOBILE NAVBAR ── */}
-      <div className="lg:hidden bg-[#0c0a08] border-b border-[#D4A574]/10 px-8 py-7 flex items-center justify-between relative">
+      <div className="lg:hidden bg-[#0c0a08] border-b border-[#D4A574]/10 px-6 py-5 flex items-center justify-between relative">
         <button onClick={() => setOpen(!open)} className="text-[#D4A574]">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
-          <img src={MainLogo} alt="Logo" className="h-10 w-auto brightness-110" />
-          <img src={tapBarLogo} alt="Tap Bar Logo" className="h-10 w-auto object-contain brightness-150 drop-shadow-[0_0_15px_rgba(212,165,116,0.3)]" />
+        <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 max-w-[60%] shrink-0">
+          <img src={MainLogo} alt="Logo" className="h-8 w-auto object-contain brightness-110 shrink-0" />
+          <img src={tapBarLogo} alt="Tap Bar Logo" className="h-16 w-auto object-contain brightness-150 shrink-0 drop-shadow-[0_0_15px_rgba(212,165,116,0.3)]" />
         </Link>
         {/* Spacer to keep flex layout balanced */}
-        <div className="w-14" />
+        <div className="w-12" />
       </div>
 
       {/* ── MOBILE OVERLAY MENU ── */}
