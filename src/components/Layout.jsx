@@ -9,9 +9,9 @@ export default function Layout() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-[#0c0a08] text-[#E6D5C3]">
       <Navbar onReserve={() => setOpen(true)} />
-      <main key={location.pathname} className="pt-20">
+      <main key={location.pathname} className="pt-16">
         <Outlet />
       </main>
       <WhatsAppButton />
